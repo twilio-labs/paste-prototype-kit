@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# Paste Prototyping Kit
+
+## Quick deploy
+
+Deploy to Codesandbox
+[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
+
+Deploy to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/twilio-labs/paste-prototype-kit/tree/main)
+
+Deploy to Netlify
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/twilio-labs/paste-prototype-kit)
 
 ## Getting Started
 
