@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Heading as="h1" variant="heading10">
-        Welcome to the Paste Prototyping Kit
+        This is an edited Heading
       </Heading>
       <Paragraph>
         The prototyping kit is a{' '}
