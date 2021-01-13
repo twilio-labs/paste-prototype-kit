@@ -14,6 +14,20 @@ import { MMSCapableIcon } from '@twilio-paste/icons/cjs/MMSCapableIcon';
 import { VoiceCapableIcon } from '@twilio-paste/icons/cjs/VoiceCapableIcon';
 
 export default function Home() {
+
+    const [data, setData] = React.useState([
+        {
+            id: 1,
+            friendlyName: 'first service',
+            sid: 4392908903
+        },
+        {
+            id: 2,
+            friendlyName: 'second service',
+            sid: 8439025738
+        }
+    ])
+
     return (
         <>
             <Heading as="h1" variant="heading10">
@@ -37,19 +51,25 @@ export default function Home() {
                     </Tr>
                 </THead>
                 <TBody>
-                    <Tr>
-                        <Td>
-                            <Anchor href="#">+1 334 339 7816</Anchor>
-                            <br />
-              Tuskegee, AL
-                        </Td>
-                        <Td>Flex Phone Number</Td>
-                        <Td>
-                            <Button variant="destructive_link">
-                                <DeleteIcon title="Delete" />
-                            </Button>
-                        </Td>
-                    </Tr>
+                    {data.map(service => {
+                        return (
+                            <Tr key={service.id}>
+                                <Td>
+                                    <Paragraph>{service.friendlyName}</Paragraph>
+                                </Td>
+                                <Td>
+                                    <Text as="span" fontFamily="fontFamilyCode">
+                                        {service.sid}
+                                    </Text>
+                                </Td>
+                                <Td>
+                                    <Button variant="destructive_link">
+                                        <DeleteIcon title="Delete" />
+                                    </Button>
+                                </Td>
+                            </Tr>
+                        )
+                    })}
                 </TBody>
             </Table>
         </>
