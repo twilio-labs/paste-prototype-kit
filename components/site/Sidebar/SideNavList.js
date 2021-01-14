@@ -33,7 +33,7 @@ const SideNavList = ({ nav }) => {
 };
 
 SideNavList.propTypes = {
-  children: PropTypes.node.isRequired,
+  nav: PropTypes.shape({}).isRequired,
 };
 
 export { SideNavList };

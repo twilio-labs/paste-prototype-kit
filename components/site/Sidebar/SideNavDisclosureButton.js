@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from '@twilio-paste/core/box';
 import { ChevronDisclosureExpandedIcon } from '@twilio-paste/icons/cjs/ChevronDisclosureExpandedIcon';
 
@@ -51,3 +52,7 @@ export const SideNavDisclosureButton = React.forwardRef((props, ref) => {
     </Box>
   );
 });
+SideNavDisclosureButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  'aria-expanded': PropTypes.string.isRequired,
+};

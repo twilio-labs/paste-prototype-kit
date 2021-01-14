@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useUIDSeed } from '@twilio-paste/core/uid-library';
 import {
   DisclosurePrimitive,
@@ -35,5 +36,9 @@ const SideNavDisclosure = ({ section, items }) => {
       </DisclosurePrimitiveContent>
     </SideNavItem>
   );
+};
+SideNavDisclosure.propTypes = {
+  section: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export { SideNavDisclosure };

@@ -1,5 +1,8 @@
 {
   "extends": ["twilio", "twilio-react"],
+  "parserOptions": {
+    "ecmaVersion": 2019
+  },
   "rules": {
     "import/no-unused-modules": 0,
     "react/display-name": 0
