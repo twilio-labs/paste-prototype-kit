@@ -31,24 +31,16 @@ export default function Home() {
 
     const toaster = useToaster();
 
-    // React.useEffect(() => {
-    //     const deleteButtons = document.getElementsByClassName('delete')
-    //     if (deleteButtons.length > 0) {
-    //         deleteButtons.forEach(button => {
-    //             button.addEventListener('click', () => {
-    //                 console.log('button clicked!')
-    //             })
-    //         })
-    //     }
-    // })
-
-    const handleDelete = (evt) => {
+    const handleDelete = (service) => {
         toaster.push({
             message: 'Service was successfully deleted.',
             variant: 'success',
             dismissAfter: 3000
         })
-        console.log('event:', evt.target)
+
+        console.log('service:', service.id)
+        const updatedServices = data.filter(serviceObj => serviceObj.id != service.id)
+        setData(updatedServices)
     }
 
     return (
@@ -89,8 +81,8 @@ export default function Home() {
                                     </Text>
                                 </Td>
                                 <Td>
-                                    <Button id={service.id} className="delete" variant="destructive_link" onClick={(evt) => handleDelete(evt)}>
-                                        <DeleteIcon title="Delete" />
+                                    <Button id={service.id} size="icon_small" variant="destructive_secondary" onClick={() => handleDelete(service)}>
+                                        <DeleteIcon title="Delete" id={service.id} />
                                     </Button>
                                 </Td>
                             </Tr>
