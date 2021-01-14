@@ -1,7 +1,5 @@
 import React from 'react';
 import { Heading } from '@twilio-paste/core/heading';
-import { Anchor } from '@twilio-paste/core/anchor';
-import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
 import { Button } from '@twilio-paste/core/button';
 import { Flex } from '@twilio-paste/core/flex';
@@ -9,10 +7,6 @@ import { Paragraph } from "@twilio-paste/core/paragraph";
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
 import { useToaster, Toaster } from "@twilio-paste/core/toast";
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
-import { FaxCapableIcon } from '@twilio-paste/icons/cjs/FaxCapableIcon';
-import { SMSCapableIcon } from '@twilio-paste/icons/cjs/SMSCapableIcon';
-import { MMSCapableIcon } from '@twilio-paste/icons/cjs/MMSCapableIcon';
-import { VoiceCapableIcon } from '@twilio-paste/icons/cjs/VoiceCapableIcon';
 
 export default function Home() {
 
@@ -26,6 +20,16 @@ export default function Home() {
             id: 2,
             friendlyName: 'second service',
             sid: 8439025738
+        },
+        {
+            id: 3,
+            friendlyName: 'third service',
+            sid: 8439025703
+        },
+        {
+            id: 4,
+            friendlyName: 'fourth service',
+            sid: 6239485739
         }
     ])
 
