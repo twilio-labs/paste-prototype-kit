@@ -7,6 +7,7 @@ import { Button } from '@twilio-paste/core/button';
 import { Flex } from '@twilio-paste/core/flex';
 import { Paragraph } from "@twilio-paste/core/paragraph";
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
+import { useToaster, Toaster } from "@twilio-paste/core/toast";
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
 import { FaxCapableIcon } from '@twilio-paste/icons/cjs/FaxCapableIcon';
 import { SMSCapableIcon } from '@twilio-paste/icons/cjs/SMSCapableIcon';
@@ -28,8 +29,31 @@ export default function Home() {
         }
     ])
 
+    const toaster = useToaster();
+
+    // React.useEffect(() => {
+    //     const deleteButtons = document.getElementsByClassName('delete')
+    //     if (deleteButtons.length > 0) {
+    //         deleteButtons.forEach(button => {
+    //             button.addEventListener('click', () => {
+    //                 console.log('button clicked!')
+    //             })
+    //         })
+    //     }
+    // })
+
+    const handleDelete = (evt) => {
+        toaster.push({
+            message: 'Service was successfully deleted.',
+            variant: 'success',
+            dismissAfter: 3000
+        })
+        console.log('event:', evt.target)
+    }
+
     return (
         <>
+            <Toaster {...toaster} />
             <Heading as="h1" variant="heading10">
                 <Flex hAlignContent="between" vAlignContent="center">
                     Services
@@ -55,7 +79,9 @@ export default function Home() {
                         return (
                             <Tr key={service.id}>
                                 <Td>
-                                    <Paragraph>{service.friendlyName}</Paragraph>
+                                    <Text>
+                                        {service.friendlyName}
+                                    </Text>
                                 </Td>
                                 <Td>
                                     <Text as="span" fontFamily="fontFamilyCode">
@@ -63,7 +89,7 @@ export default function Home() {
                                     </Text>
                                 </Td>
                                 <Td>
-                                    <Button variant="destructive_link">
+                                    <Button id={service.id} className="delete" variant="destructive_link" onClick={(evt) => handleDelete(evt)}>
                                         <DeleteIcon title="Delete" />
                                     </Button>
                                 </Td>
