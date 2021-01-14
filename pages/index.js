@@ -5,10 +5,10 @@ import { Card } from '@twilio-paste/core/card';
 import { Stack } from '@twilio-paste/core/stack';
 import { Heading } from '@twilio-paste/core/heading';
 import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Anchor } from '@twilio-paste/core/anchor';
 
 import { PrototypeAnchor } from '../components/site/PrototypeAnchor';
 import { Code } from '../components/site/Code';
-import { Anchor } from '@twilio-paste/core/dist/anchor';
 
 export default function Home() {
   return (

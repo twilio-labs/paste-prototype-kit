@@ -12,19 +12,20 @@
     "prettier-clean": "prettier --write './**/*.{js,jsx}'"
   },
   "dependencies": {
-    "@twilio-paste/core": "4.1.11",
-    "@twilio-paste/icons": "3.9.0",
+    "@twilio-paste/core": "4.2.11",
+    "@twilio-paste/icons": "3.11.1",
     "fs": "^0.0.1-security",
-    "next": "10.0.3",
+    "next": "10.0.5",
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "swr": "^0.3.9"
+    "swr": "^0.4.0"
   },
   "devDependencies": {
-    "eslint": "7.14.0",
-    "eslint-config-twilio": "1.29.0",
-    "eslint-config-twilio-react": "1.29.1",
-    "prettier": "2.2.0"
+    "eslint": "7.17.0",
+    "eslint-config-twilio": "1.31.0",
+    "eslint-config-twilio-react": "1.31.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "2.2.1"
   }
 }

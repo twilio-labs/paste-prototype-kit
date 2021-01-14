@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from '@twilio-paste/core/box';
 
 export const MastheadContainer = ({ children }) => {
@@ -9,3 +10,6 @@ export const MastheadContainer = ({ children }) => {
   );
 };
 MastheadContainer.displayName = 'MastheadContainer';
+MastheadContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+};
