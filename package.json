@@ -9,11 +9,13 @@
     "lint": "eslint --ext js ./",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --list-different './**/*.{js,jsx}'",
-    "prettier-clean": "prettier --write './**/*.{js,jsx}'"
+    "prettier-clean": "prettier --write './**/*.{js,jsx}'",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@twilio-paste/core": "4.2.11",
     "@twilio-paste/icons": "3.11.1",
+    "cypress": "6.2.1",
     "fs": "^0.0.1-security",
     "next": "10.0.5",
     "prop-types": "15.7.2",
