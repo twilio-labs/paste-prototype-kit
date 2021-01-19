@@ -68,7 +68,9 @@ export default function Delete() {
             return (
               <Tr key={service.id}>
                 <Td>
-                  <Text as="span" fontFamily="fontFamilyText">{service.friendlyName}</Text>
+                  <Text as="span" fontFamily="fontFamilyText">
+                    {service.friendlyName}
+                  </Text>
                 </Td>
                 <Td>
                   <Text as="span" fontFamily="fontFamilyCode">
