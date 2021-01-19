@@ -2,32 +2,31 @@ import React from 'react';
 import { Heading } from '@twilio-paste/core/heading';
 import { Text } from '@twilio-paste/core/text';
 import { Button } from '@twilio-paste/core/button';
-import { Flex } from '@twilio-paste/core/flex';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
 
-export default function Home() {
+export default function Delete() {
   const [data, setData] = React.useState([
     {
       id: 1,
-      friendlyName: 'first service',
+      friendlyName: 'First Service',
       sid: 4392908903,
     },
     {
       id: 2,
-      friendlyName: 'second service',
+      friendlyName: 'Second Service',
       sid: 8439025738,
     },
     {
       id: 3,
-      friendlyName: 'third service',
+      friendlyName: 'Third Service',
       sid: 8439025703,
     },
     {
       id: 4,
-      friendlyName: 'fourth service',
+      friendlyName: 'Fourth Service',
       sid: 6239485739,
     },
   ]);
@@ -36,11 +35,11 @@ export default function Home() {
 
   const handleDelete = (service) => {
     toaster.push({
-      message: 'Service was successfully deleted.',
+      message: `${service.friendlyName} was successfully deleted.`,
       variant: 'success',
       dismissAfter: 3000,
     });
-    const updatedServices = data.filter((serviceObj) => serviceObj.id != service.id);
+    const updatedServices = data.filter((serviceObj) => serviceObj.id !== service.id);
     setData(updatedServices);
   };
 
@@ -48,15 +47,13 @@ export default function Home() {
     <>
       <Toaster {...toaster} />
       <Heading as="h1" variant="heading10">
-        <Flex hAlignContent="between" vAlignContent="center">
-          Services
-        </Flex>
-        <Paragraph>
-          Services enable you to organize and identify your conversations by use case, or manage them in multiple
-          environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
-          recepients' data.
-        </Paragraph>
+        Services
       </Heading>
+      <Paragraph>
+        Services enable you to organize and identify your conversations by use case, or manage them in multiple
+        environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
+        recepients&apos; data.
+      </Paragraph>
 
       <Table>
         <THead>
@@ -71,7 +68,7 @@ export default function Home() {
             return (
               <Tr key={service.id}>
                 <Td>
-                  <Text>{service.friendlyName}</Text>
+                  <Text as="span" /*fontFamily="fontFamilyText"*/>{service.friendlyName}</Text>
                 </Td>
                 <Td>
                   <Text as="span" fontFamily="fontFamilyCode">
@@ -85,7 +82,7 @@ export default function Home() {
                     variant="destructive_secondary"
                     onClick={() => handleDelete(service)}
                   >
-                    <DeleteIcon title="Delete" id={service.id} />
+                    <DeleteIcon title="Delete" />
                   </Button>
                 </Td>
               </Tr>
