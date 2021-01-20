@@ -1,13 +1,17 @@
 import React from 'react';
 import { Heading } from '@twilio-paste/core/heading';
 import { Text } from '@twilio-paste/core/text';
-import { Button } from '@twilio-paste/core/button';
+// import { Button } from '@twilio-paste/core/button';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
-import { useToaster, Toaster } from '@twilio-paste/core/toast';
-import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
+// import { useToaster, Toaster } from '@twilio-paste/core/toast';
+// import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
+import DeleteButton from '../../components/site/patterns/delete-button';
 
 export default function Delete() {
+
+  const severity = 'low'
+
   const [data, setData] = React.useState([
     {
       id: 1,
@@ -31,21 +35,21 @@ export default function Delete() {
     },
   ]);
 
-  const toaster = useToaster();
+  // const toaster = useToaster();
 
-  const handleDelete = (service) => {
-    toaster.push({
-      message: `${service.friendlyName} was successfully deleted.`,
-      variant: 'success',
-      dismissAfter: 3000,
-    });
-    const updatedServices = data.filter((serviceObj) => serviceObj.id !== service.id);
-    setData(updatedServices);
-  };
+  // const handleDelete = (service) => {
+  //   toaster.push({
+  //     message: `${service.friendlyName} was successfully deleted.`,
+  //     variant: 'success',
+  //     dismissAfter: 3000,
+  //   });
+  //   const updatedServices = data.filter((serviceObj) => serviceObj.id !== service.id);
+  //   setData(updatedServices);
+  // };
 
   return (
     <>
-      <Toaster {...toaster} />
+      {/* <Toaster {...toaster} /> */}
       <Heading as="h1" variant="heading10">
         Services
       </Heading>
@@ -78,14 +82,15 @@ export default function Delete() {
                   </Text>
                 </Td>
                 <Td>
-                  <Button
+                  {/* <Button
                     id={service.id}
                     size="icon_small"
                     variant="destructive_secondary"
                     onClick={() => handleDelete(service)}
                   >
                     <DeleteIcon title="Delete" />
-                  </Button>
+                  </Button> */}
+                  <DeleteButton service={service} data={data} setData={setData} severity={severity} />
                 </Td>
               </Tr>
             );
