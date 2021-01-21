@@ -2,34 +2,46 @@ import React from 'react';
 import { Heading } from '@twilio-paste/core/heading';
 import { Text } from '@twilio-paste/core/text';
 import { Paragraph } from '@twilio-paste/core/paragraph';
-import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
-import DeleteButton from '../../components/site/patterns/delete-button';
+import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 
 export default function Delete() {
 
-  const severity = 'low'
+  let severity = 'low'
 
-  const [data, setData] = React.useState([
+  let [data, setData] = React.useState([
     {
       id: 1,
-      friendlyName: 'First Service',
-      sid: 4392908903,
+      friendlyName:
+        <Text as="span" fontFamily="fontFamilyText">
+          Fiiiiiiiiirst thing
+        </Text>,
+      sid: <Text as="span" fontFamily="fontFamilyCode">4392908903</Text>,
+      thirdCol: <Text as="span">lskdfjl</Text>
     },
     {
       id: 2,
-      friendlyName: 'Second Service',
-      sid: 8439025738,
+      friendlyName:
+        <Text as="span" fontFamily="fontFamilyText">
+          Second thing
+        </Text>,
+      sid: <Text as="span" fontFamily="fontFamilyCode">8439025738</Text>,
     },
     {
       id: 3,
-      friendlyName: 'Third Service',
-      sid: 8439025703,
+      friendlyName:
+        <Text as="span" fontFamily="fontFamilyText">
+          Third thing
+        </Text>,
+      sid: <Text as="span" fontFamily="fontFamilyCode">8439025738</Text>,
     },
     {
       id: 4,
-      friendlyName: 'Fourth Service',
-      sid: 6239485739,
+      friendlyName:
+        <Text as="span" fontFamily="fontFamilyText">
+          Third thing
+        </Text>,
+      sid: <Text as="span" fontFamily="fontFamilyCode">6239485739</Text>,
     },
   ]);
 
@@ -47,36 +59,9 @@ export default function Delete() {
         recepients&apos; data.
       </Paragraph>
 
-      <Table>
-        <THead>
-          <Tr>
-            <Th>Friendly Name</Th>
-            <Th>SID</Th>
-            <Th>Actions</Th>
-          </Tr>
-        </THead>
-        <TBody>
-          {data.map((service) => {
-            return (
-              <Tr key={service.id}>
-                <Td>
-                  <Text as="span" fontFamily="fontFamilyText">
-                    {service.friendlyName}
-                  </Text>
-                </Td>
-                <Td>
-                  <Text as="span" fontFamily="fontFamilyCode">
-                    {service.sid}
-                  </Text>
-                </Td>
-                <Td>
-                  <DeleteButton service={service} data={data} setData={setData} severity={severity} toaster={toaster} />
-                </Td>
-              </Tr>
-            );
-          })}
-        </TBody>
-      </Table>
+      <DeleteTable data={data} handleDelete={(id) => {
+        console.log(id)
+      }} />
     </>
   );
 }

@@ -1,0 +1,45 @@
+import React from 'react';
+import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
+import { Button } from '@twilio-paste/core/button';
+import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
+
+export const DeleteTable = ({ data, handleDelete }) => {
+
+  const cols = Object.keys(data[0])
+
+  return (
+    <Table>
+      <THead>
+        <Tr>
+          {cols.map((key) => {
+            if (key === 'id') return <></>
+            return (
+              <Th key={cols.indexOf(key)}>{key}</Th>
+            )
+          })}
+          <Th>Actions</Th>
+        </Tr>
+      </THead>
+      <TBody>
+        {data.map((service) => {
+          let row = []
+          for (let i = 1; i < cols.length; i++) {
+            row.push(<Td key={service.id + i}>{service[cols[i]]}</Td>)
+          }
+          row.push(
+            <Td key={service.id}>
+              <Button
+                id={service.id}
+                size="icon_small"
+                variant="destructive_secondary"
+                onClick={() => handleDelete(service.id)}
+              >
+                <DeleteIcon title="Delete" />
+              </Button>
+            </Td>)
+          return (<Tr key={service.id}>{row}</Tr>);
+        })}
+      </TBody>
+    </Table>
+  )
+}
