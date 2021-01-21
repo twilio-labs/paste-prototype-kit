@@ -10,7 +10,6 @@ import { Masthead } from '../components/site/Masthead';
 import { SiteBody } from '../components/site/SiteBody';
 import { SiteMain } from '../components/site/SiteMain';
 import { SideBar } from '../components/site/Sidebar';
-import { NavProvider } from '../components/site/NavContext';
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
@@ -28,15 +27,14 @@ function MyApp({ Component, pageProps }) {
         </Anchor>
         .
       </Alert>
-      <NavProvider>
-        <Masthead>{/* Enter masthead content  */}</Masthead>
-        <SiteBody>
-          <SideBar />
-          <SiteMain>
-            <Component {...pageProps} />
-          </SiteMain>
-        </SiteBody>
-      </NavProvider>
+
+      <Masthead>{/* Enter masthead content  */}</Masthead>
+      <SiteBody>
+        <SideBar />
+        <SiteMain>
+          <Component {...pageProps} />
+        </SiteMain>
+      </SiteBody>
     </Theme.Provider>
   );
 }
