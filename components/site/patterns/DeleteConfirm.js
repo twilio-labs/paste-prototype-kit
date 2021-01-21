@@ -1,7 +1,7 @@
 import React from 'react';
-import { useUID } from '@twilio-paste/uid-library';
-import { Button } from '@twilio-paste/button';
-import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHeading } from '@twilio-paste/modal';
+import { useUID } from '@twilio-paste/core/uid-library';
+import { Button } from '@twilio-paste/core/button';
+import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHeading } from '@twilio-paste/core/modal';
 
 export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => {
 
