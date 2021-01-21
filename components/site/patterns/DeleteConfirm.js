@@ -4,13 +4,12 @@ import { Button } from '@twilio-paste/core/button';
 import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHeading } from '@twilio-paste/core/modal';
 
 export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => {
-
   const modalHeadingID = useUID();
   const handleClose = () => setIsOpen(false);
   const handleConfirm = (service) => {
-    deleteService(service)
-    setIsOpen(false)
-  }
+    deleteService(service);
+    setIsOpen(false);
+  };
 
   return (
     <div>
@@ -26,11 +25,12 @@ export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => 
             <Button variant="secondary" onClick={handleClose}>
               Cancel
             </Button>
-            <Button variant="destructive" onClick={() => handleConfirm(service)}>Delete</Button>
+            <Button variant="destructive" onClick={() => handleConfirm(service)}>
+              Delete
+            </Button>
           </ModalFooterActions>
         </ModalFooter>
       </Modal>
     </div>
   );
-}
-
+};
