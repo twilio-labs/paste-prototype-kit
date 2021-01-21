@@ -32,7 +32,7 @@ export const DeleteTable = ({ data, handleDelete }) => {
                 id={service.id}
                 size="icon_small"
                 variant="destructive_secondary"
-                onClick={() => handleDelete(service.id)}
+                onClick={() => handleDelete(service)}
               >
                 <DeleteIcon title="Delete" />
               </Button>
