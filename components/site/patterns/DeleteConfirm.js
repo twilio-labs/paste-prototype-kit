@@ -3,6 +3,7 @@ import { useUID } from '@twilio-paste/core/uid-library';
 import { Button } from '@twilio-paste/core/button';
 import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHeading } from '@twilio-paste/core/modal';
 import PropTypes from 'prop-types';
+import { DeleteTable } from './DeleteTable';
 
 export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => {
   const modalHeadingID = useUID();
@@ -42,3 +43,10 @@ DeleteConfirm.propTypes = {
   setIsOpen: PropTypes.func,
   deleteService: PropTypes.func,
 };
+
+DeleteConfirm.defaultProps = {
+  service: {},
+  isOpen: false,
+  setIsOpen: {},
+  deleteService: {},
+}
