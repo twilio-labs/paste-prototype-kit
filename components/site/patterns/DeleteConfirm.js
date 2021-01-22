@@ -2,12 +2,13 @@ import React from 'react';
 import { useUID } from '@twilio-paste/core/uid-library';
 import { Button } from '@twilio-paste/core/button';
 import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHeading } from '@twilio-paste/core/modal';
+import PropTypes from 'prop-types';
 
 export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => {
   const modalHeadingID = useUID();
   const handleClose = () => setIsOpen(false);
-  const handleConfirm = (service) => {
-    deleteService(service);
+  const handleConfirm = (serviceObj) => {
+    deleteService(serviceObj);
     setIsOpen(false);
   };
 
@@ -34,3 +35,10 @@ export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => 
     </div>
   );
 };
+
+DeleteConfirm.propTypes = {
+  service: PropTypes.object,
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
+  deleteService: PropTypes.func
+}

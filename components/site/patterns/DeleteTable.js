@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
 import { Button } from '@twilio-paste/core/button';
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
+import PropTypes from 'prop-types';
 
 export const DeleteTable = ({ data, handleDelete }) => {
   const cols = Object.keys(data[0]);
@@ -40,4 +41,9 @@ export const DeleteTable = ({ data, handleDelete }) => {
       </TBody>
     </Table>
   );
+};
+
+DeleteTable.propTypes = {
+  data: PropTypes.array,
+  handleDelete: PropTypes.func
 };
