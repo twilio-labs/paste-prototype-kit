@@ -40,5 +40,5 @@ DeleteConfirm.propTypes = {
   service: PropTypes.object,
   isOpen: PropTypes.bool,
   setIsOpen: PropTypes.func,
-  deleteService: PropTypes.func
-}
+  deleteService: PropTypes.func,
+};

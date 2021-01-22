@@ -43,7 +43,7 @@ export const DeleteTable = ({ data, handleDelete }) => {
   );
 };
 
-DeleteTable.propTypes = {
-  data: PropTypes.array,
-  handleDelete: PropTypes.func
+DeleteTable.defaultProps = {
+  data: [{}],
+  handleDelete: () => { },
 };
