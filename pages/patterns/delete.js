@@ -77,6 +77,7 @@ export default function Delete() {
     });
     const updatedServices = data.filter((service) => service.id !== serviceObj.id);
     setData(updatedServices);
+    setServiceToDelete({});
   };
 
   const handleDelete = (serviceObj) => {

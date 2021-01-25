@@ -1,10 +1,19 @@
 import React from 'react';
 import { Table, TBody, Th, THead, Tr, Td } from '@twilio-paste/core/table';
+import { Text } from '@twilio-paste/core/text';
 import { Button } from '@twilio-paste/core/button';
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
 import PropTypes from 'prop-types';
 
 export const DeleteTable = ({ data, handleDelete }) => {
+  if (data.length === 0) {
+    return (
+      <Text as="span" fontFamily="fontFamilyText">
+        Nothing to delete!
+      </Text>
+    );
+  }
+
   const cols = Object.keys(data[0]);
 
   return (
