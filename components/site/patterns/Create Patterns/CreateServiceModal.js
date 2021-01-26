@@ -8,7 +8,9 @@ import { Modal, ModalBody, ModalFooter, ModalFooterActions, ModalHeader, ModalHe
 import { Box } from '@twilio-paste/core/box';
 import { Button } from '@twilio-paste/core/button';
 import { Stack } from '@twilio-paste/core/stack';
+import PropTypes from 'prop-types';
 
+// These are the default values for the form
 const defaultValues = { serviceName: '', serviceSID: '' };
 
 export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
@@ -19,6 +21,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
   const serviceNameID = useUID();
   const serviceSidID = useUID();
 
+  // This resets the form to default values when the modal is closed
   React.useEffect(() => {
     if (!isModalOpen) {
       reset(defaultValues);
@@ -39,6 +42,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
               <Label htmlFor={serviceNameID} required>
                 Service Name
               </Label>
+              {/* This is one of the inputs */}
               <Controller
                 as={Input}
                 id={serviceNameID}
@@ -60,6 +64,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
               <Label htmlFor={serviceSidID} required>
                 SID
               </Label>
+              {/* This is the other input */}
               <Controller
                 as={Input}
                 id={serviceSidID}
@@ -93,4 +98,17 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
       </form>
     </Modal>
   );
+};
+
+// These ensure that the props passed from the parent component are present and/or correctly typed
+CreateServiceModal.propTypes = {
+  isModalOpen: PropTypes.bool,
+  handleClose: PropTypes.func,
+  onSubmit: PropTypes.func,
+};
+
+CreateServiceModal.defaultProps = {
+  isModalOpen: false,
+  handleClose: {},
+  onSubmit: {},
 };

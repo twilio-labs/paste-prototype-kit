@@ -1,5 +1,7 @@
-// Comment the other and uncomment this to view/edit the empty state
-// export const serviceData = [];
+/*
+ * Comment the other and uncomment this to view/edit the empty state
+ * export const serviceData = [];
+ */
 export const serviceData = [
   {
     name: 'Montanõ - Valencia',

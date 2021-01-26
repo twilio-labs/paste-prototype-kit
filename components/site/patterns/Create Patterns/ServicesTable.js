@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text } from '@twilio-paste/core/text';
 import { Anchor } from '@twilio-paste/core/anchor';
 import { Table, THead, TBody, Tr, Th, Td } from '@twilio-paste/core/table';
+import PropTypes from 'prop-types';
 
 export const ServicesTable = ({ services }) => {
   // Empty state handling
@@ -39,4 +40,13 @@ export const ServicesTable = ({ services }) => {
       </TBody>
     </Table>
   );
+};
+
+// These ensure that the props passed from the parent component are present and/or correctly typed
+ServicesTable.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.object),
+};
+
+ServicesTable.defaultProps = {
+  services: [],
 };

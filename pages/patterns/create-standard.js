@@ -7,6 +7,7 @@ import { Heading } from '@twilio-paste/core/heading';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Stack } from '@twilio-paste/core/stack';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
+
 import { CreateServiceModal } from '../../components/site/patterns/Create Patterns/CreateServiceModal';
 import { ServicesTable } from '../../components/site/patterns/Create Patterns/ServicesTable';
 import { serviceData } from '../../components/site/patterns/Create Patterns/data';
@@ -55,14 +56,16 @@ export default function Create() {
               <Button variant="primary" onClick={openModal}>
                 Create new service
               </Button>
+              {/* This renders the modal, depending isModalOpen */}
               <CreateServiceModal isModalOpen={isModalOpen} handleClose={closeModal} onSubmit={handleFormSubmit} />
             </Box>
           </Box>
           <Paragraph>
             Services enable you to organize and identify your conversations by use case, or manage them in multiple
             environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
-            recepients' data.
+            recipients&apos; data.
           </Paragraph>
+          {/* This renders the services table */}
           <ServicesTable services={services} />
         </Stack>
       </Box>
