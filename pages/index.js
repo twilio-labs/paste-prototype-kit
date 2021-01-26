@@ -31,9 +31,10 @@ export default function Home() {
               Creating pages
             </Heading>
             <Paragraph>
-              Create pages in the <Code>pages</Code> directory. You can copy the <Code>template-page.js</Code> file
-              and rename it as <Code>my-new-page.js</Code> to get you going. The name of the file in the <Code>pages</Code> directory will result in a route of the same
-              name. e.g. <Code>my-new-page.js</Code> =&gt; <Code>/my-new-page</Code>.
+              Create pages in the <Code>pages</Code> directory. You can copy the <Code>template-page.js</Code> file and
+              rename it as <Code>my-new-page.js</Code> to get you going. The name of the file in the <Code>pages</Code>{' '}
+              directory will result in a route of the same name. e.g. <Code>my-new-page.js</Code> =&gt;{' '}
+              <Code>/my-new-page</Code>.
             </Paragraph>
           </Card>
         </Column>
@@ -43,15 +44,16 @@ export default function Home() {
               Adding to the side nav
             </Heading>
             <Paragraph>
-              To add a link to a new page in the side bar, add the new page's file name to the pages.json file in the <Code>pages</Code> directory.
-              Make sure it is in quotes and followed by <Code>: []</Code>. For example:
+              To add a link to a new page in the side bar, add the new page&apos;s file name to the pages.json file in
+              the <Code>pages</Code> directory. Make sure it is in quotes and followed by <Code>: []</Code>. For
+              example:
             </Paragraph>
             <Paragraph>
-              <Code>"my-new-page": []</Code>
+              <Code>&quot;my-new-page&quot;: []</Code>
             </Paragraph>
             <Paragraph>
-              <strong>Note:</strong> if you are adding to the middle of the list, end the new line with a comma.
-              If it is the last list item, do not end the line with a comma.
+              <strong>Note:</strong> if you are adding to the middle of the list, end the new line with a comma. If it
+              is the last list item, do not end the line with a comma.
             </Paragraph>
           </Card>
         </Column>

@@ -8,7 +8,6 @@ import { SideNavDisclosure } from './SideNavDisclosure';
 import { kebabToSentence } from '../utils';
 
 const SideNavList = ({ nav }) => {
-  console.log("got to SideNavList")
   if (nav === null || nav === undefined) return false;
   return (
     <Box as="ul" padding="space0" margin="space0" listStyleType="none">
