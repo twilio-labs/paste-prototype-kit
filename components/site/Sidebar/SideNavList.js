@@ -15,7 +15,7 @@ const SideNavList = ({ nav }) => {
         if (nav[item].length > 0) {
           return <SideNavDisclosure section={item} items={nav[item]} />;
         }
-        if (item === 'index') {
+        if (item === 'home') {
           return (
             <SideNavItem key={index}>
               <SideNavLink href="/">Home</SideNavLink>
