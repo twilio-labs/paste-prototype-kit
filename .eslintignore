@@ -1,5 +1,5 @@
 /node_modules/**
 /cypress/integration/examples
-/cypress/plugins
 /cypress/support
 /cypress/fixtures
+/cypress/plugins/**
