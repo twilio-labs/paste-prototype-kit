@@ -5,14 +5,21 @@ import { Button } from '@twilio-paste/core/button';
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
 import PropTypes from 'prop-types';
 
-export const DeleteTable = ({ columns, rows, handleDelete }) => {
+export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
   if (rows.length === 0) {
     return (
       <Text as="span" fontFamily="fontFamilyText">
-        Nothing to delete!
+        {emptyState}
       </Text>
     );
   }
+
+  rows.forEach((row) => {
+    if (row.length > columns.length)
+      throw new Error(
+        'If you are seeing this error, it is because you added more cells than there are columns. Go back to delete.js and add a new column heading. DO NOT try to fix this error in DeleteTable.js!',
+      );
+  });
 
   return (
     <Table>
@@ -26,6 +33,12 @@ export const DeleteTable = ({ columns, rows, handleDelete }) => {
       </THead>
       <TBody>
         {rows.map((row, index) => {
+          if (row.length < columns.length) {
+            let diff = columns.length - row.length;
+            for (let i = 0; i < diff; i++) {
+              row.push(<Text as="span" fontFamily="fontFamilyText"></Text>);
+            }
+          }
           return (
             <Tr>
               {row.map((cell) => (
@@ -48,10 +61,12 @@ DeleteTable.propTypes = {
   columns: PropTypes.array,
   handleDelete: PropTypes.func,
   rows: PropTypes.array,
+  emptyState: PropTypes.string,
 };
 
 DeleteTable.defaultProps = {
   columns: [],
   handleDelete: {},
   rows: [[]],
+  emptyState: '',
 };

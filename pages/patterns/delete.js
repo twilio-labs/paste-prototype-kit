@@ -6,14 +6,22 @@ import { useToaster, Toaster } from '@twilio-paste/core/toast';
 import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
 
-const columns = ['friendlyName', 'sid'];
+const severity = 'medium';
+const pageHeading = 'Services';
+const tableDescription =
+  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recepients&apos; data.';
+const emptyState = 'Nothing to delete here!';
+const columns = ['friendlyName', 'sid', 'greetings'];
 const initialRows = [
   [
-    <Text as="span" fontFamily="fontFamilyCode">
+    <Text as="span" fontFamily="fontFamilyText">
       Fiiiiiiiiirst thing
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
       4392908903
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      hi
     </Text>,
   ],
   [
@@ -22,6 +30,9 @@ const initialRows = [
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
       8439025738
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyText">
+      hello
     </Text>,
   ],
   [
@@ -41,12 +52,8 @@ const initialRows = [
     </Text>,
   ],
 ];
-const pageHeading = 'Services';
-const tableDescription =
-  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recepients&apos; data.';
-export default function Delete() {
-  const severity = 'medium';
 
+export default function Delete() {
   const [rows, setRows] = useState(initialRows);
 
   const toaster = useToaster();
@@ -80,7 +87,7 @@ export default function Delete() {
         {pageHeading}
       </Heading>
       <Paragraph>{tableDescription}</Paragraph>
-      <DeleteTable columns={columns} rows={rows} handleDelete={handleDelete} />
+      <DeleteTable columns={columns} rows={rows} emptyState={emptyState} handleDelete={handleDelete} />
       <DeleteConfirm service={serviceToDelete} isOpen={isOpen} setIsOpen={setIsOpen} deleteService={deleteService} />
     </>
   );
