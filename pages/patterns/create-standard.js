@@ -52,7 +52,7 @@ export default function Create() {
             <Heading as="h1" variant="heading10" marginBottom="space0">
               Services
             </Heading>
-            <Box marginLeft="auto">
+            <Box marginLeft="auto" data-cy="create-new-service">
               <Button variant="primary" onClick={openModal}>
                 Create new service
               </Button>

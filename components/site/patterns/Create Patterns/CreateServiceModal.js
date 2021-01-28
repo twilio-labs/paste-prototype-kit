@@ -29,7 +29,13 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
   }, [isModalOpen, reset]);
 
   return (
-    <Modal ariaLabelledby={modalHeadingID} isOpen={isModalOpen} onDismiss={handleClose} size="default">
+    <Modal
+      ariaLabelledby={modalHeadingID}
+      isOpen={isModalOpen}
+      onDismiss={handleClose}
+      size="default"
+      data-cy="create-services-modal"
+    >
       <ModalHeader>
         <ModalHeading as="h3" id={modalHeadingID}>
           Create new service
@@ -57,6 +63,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
                     message: 'Please enter more than two characters',
                   },
                 }}
+                data-cy="service-modal-input"
               />
               {errors.serviceName && <HelpText variant="error">{errors.serviceName.message}</HelpText>}
             </Box>
@@ -79,6 +86,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
                     message: 'Please enter more than two characters',
                   },
                 }}
+                data-cy="sid-modal-input"
               />
               {errors.serviceSID && <HelpText variant="error">{errors.serviceSID.message}</HelpText>}
             </Box>
@@ -86,11 +94,11 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
         </ModalBody>
         <ModalFooter>
           <ModalFooterActions>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={handleClose} data-cy="close-service-modal">
               Cancel
             </Button>
             {/* This makes hitting the Enter key submit the form successfully */}
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" data-cy="submit-modal-input">
               Submit
             </Button>
           </ModalFooterActions>

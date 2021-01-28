@@ -11,7 +11,7 @@ export const ServicesTable = ({ services }) => {
   }
 
   return (
-    <Table tableLayout="fixed">
+    <Table tableLayout="fixed" data-cy="create-services-table">
       <THead>
         <Tr>
           <Th>Friendly Name</Th>
@@ -22,7 +22,7 @@ export const ServicesTable = ({ services }) => {
       <TBody>
         {services.map(({ name, sid, created }, index) => {
           return (
-            <Tr key={index}>
+            <Tr key={index} data-cy={`${name}-row`}>
               <Td>
                 <Anchor href="#">{name}</Anchor>
               </Td>
