@@ -20,7 +20,7 @@ export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => 
             Delete service
           </ModalHeading>
         </ModalHeader>
-        <ModalBody>You&apos;re about to delete {service.friendlyName}. Would you like to proceed?</ModalBody>
+        <ModalBody>You&apos;re about to delete {service[0]}. Would you like to proceed?</ModalBody>
         <ModalFooter>
           <ModalFooterActions>
             <Button variant="secondary" onClick={handleClose}>

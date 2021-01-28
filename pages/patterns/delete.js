@@ -60,23 +60,23 @@ export default function Delete() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [serviceToDelete, setServiceToDelete] = React.useState({});
 
-  const deleteService = (serviceObj) => {
+  const deleteService = (serviceRow) => {
     toaster.push({
-      message: `${serviceObj.friendlyName.props.children} was successfully deleted.`,
+      message: `${serviceRow[0].props.children} was successfully deleted.`,
       variant: 'success',
       dismissAfter: 3000,
     });
-    const updatedServices = data.filter((service) => service.id !== serviceObj.id);
-    setData(updatedServices);
+    const updatedServices = rows.filter((row) => rows.indexOf(serviceRow) !== rows.indexOf(row));
+    setRows(updatedServices);
     setServiceToDelete({});
   };
 
-  const handleDelete = (serviceObj) => {
+  const handleDelete = (serviceRow) => {
     if (severity === 'low') {
-      deleteService(serviceObj);
+      deleteService(serviceRow);
     } else if (severity === 'medium') {
       setIsOpen(true);
-      setServiceToDelete(serviceObj);
+      setServiceToDelete(serviceRow);
     }
   };
 
