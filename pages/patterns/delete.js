@@ -5,6 +5,14 @@ import { Paragraph } from '@twilio-paste/core/paragraph';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
 import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
+import { Alert } from '@twilio-paste/core/alert';
+import { Anchor } from '@twilio-paste/core/anchor';
+import { Box } from '@twilio-paste/core/box';
+
+//To change severity level (for more information on that, check out Paste Delete Pattern docs),
+//type 'low' or 'medium' below ('high' severity is not yet available).
+
+//To change what appears on the Delete Pattern page, edit the data below.
 
 const severity = 'medium';
 const pageHeading = 'Services';
@@ -12,7 +20,7 @@ const tableDescription =
   'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recepients&apos; data.';
 const emptyState = 'Nothing to delete here!';
 const columns = ['friendlyName', 'sid', 'greetings'];
-const initialRows = [
+const rows = [
   [
     <Text as="span" fontFamily="fontFamilyText">
       Fiiiiiiiiirst thing
@@ -54,7 +62,7 @@ const initialRows = [
 ];
 
 export default function Delete() {
-  const [rows, setRows] = useState(initialRows);
+  const [tableRows, setTableRows] = useState(rows);
 
   const toaster = useToaster();
   const [isOpen, setIsOpen] = React.useState(false);
@@ -66,8 +74,8 @@ export default function Delete() {
       variant: 'success',
       dismissAfter: 3000,
     });
-    const updatedServices = rows.filter((row) => rows.indexOf(serviceRow) !== rows.indexOf(row));
-    setRows(updatedServices);
+    const updatedServices = tableRows.filter((row) => tableRows.indexOf(serviceRow) !== tableRows.indexOf(row));
+    setTableRows(updatedServices);
     setServiceToDelete({});
   };
 
@@ -77,17 +85,33 @@ export default function Delete() {
     } else if (severity === 'medium') {
       setIsOpen(true);
       setServiceToDelete(serviceRow);
+    } else {
+      throw new Error(
+        'No severity level was detected. Go back to delete.js and make sure to change severity to "low", "medium", or "high"!',
+      );
     }
   };
 
   return (
     <>
       <Toaster {...toaster} />
+      <Box marginBottom="space100">
+        <Alert variant="neutral">
+          <Text as="span">
+            <strong>Hello! </strong>To edit this page in CodeSandbox, go to the "pages" folder and click the "delete.js"
+            file. Check out the{' '}
+            <Anchor href="https://paste.twilio.design/patterns/delete/" showExternal>
+              Paste Delete Pattern documentation
+            </Anchor>{' '}
+            for more information. To get rid of this alert box, delete lines 90-99 from the "delete.js" file.
+          </Text>
+        </Alert>
+      </Box>
       <Heading as="h1" variant="heading10">
         {pageHeading}
       </Heading>
       <Paragraph>{tableDescription}</Paragraph>
-      <DeleteTable columns={columns} rows={rows} emptyState={emptyState} handleDelete={handleDelete} />
+      <DeleteTable columns={columns} rows={tableRows} emptyState={emptyState} handleDelete={handleDelete} />
       <DeleteConfirm service={serviceToDelete} isOpen={isOpen} setIsOpen={setIsOpen} deleteService={deleteService} />
     </>
   );
