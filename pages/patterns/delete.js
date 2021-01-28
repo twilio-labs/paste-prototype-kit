@@ -1,69 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Heading } from '@twilio-paste/core/heading';
 import { Text } from '@twilio-paste/core/text';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
-
 import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
 
+const columns = ['friendlyName', 'sid'];
+const initialRows = [
+  [
+    <Text as="span" fontFamily="fontFamilyCode">
+      Fiiiiiiiiirst thing
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      4392908903
+    </Text>,
+  ],
+  [
+    <Text as="span" fontFamily="fontFamilyCode">
+      Second Thing
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      8439025738
+    </Text>,
+  ],
+  [
+    <Text as="span" fontFamily="fontFamilyCode">
+      Third thing
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      8439025738
+    </Text>,
+  ],
+  [
+    <Text as="span" fontFamily="fontFamilyCode">
+      Fourth this
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      6239485739
+    </Text>,
+  ],
+];
+const pageHeading = 'Services';
+const tableDescription =
+  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recepients&apos; data.';
 export default function Delete() {
   const severity = 'medium';
 
-  const [data, setData] = React.useState([
-    {
-      id: 1,
-      friendlyName: (
-        <Text as="span" fontFamily="fontFamilyText">
-          Fiiiiiiiiirst thing
-        </Text>
-      ),
-      sid: (
-        <Text as="span" fontFamily="fontFamilyCode">
-          4392908903
-        </Text>
-      ),
-    },
-    {
-      id: 2,
-      friendlyName: (
-        <Text as="span" fontFamily="fontFamilyText">
-          Second thing
-        </Text>
-      ),
-      sid: (
-        <Text as="span" fontFamily="fontFamilyCode">
-          8439025738
-        </Text>
-      ),
-    },
-    {
-      id: 3,
-      friendlyName: (
-        <Text as="span" fontFamily="fontFamilyText">
-          Third thing
-        </Text>
-      ),
-      sid: (
-        <Text as="span" fontFamily="fontFamilyCode">
-          8439025738
-        </Text>
-      ),
-    },
-    {
-      id: 4,
-      friendlyName: (
-        <Text as="span" fontFamily="fontFamilyText">
-          last thing
-        </Text>
-      ),
-      sid: (
-        <Text as="span" fontFamily="fontFamilyCode">
-          6239485739
-        </Text>
-      ),
-    },
-  ]);
+  const [rows, setRows] = useState(initialRows);
 
   const toaster = useToaster();
   const [isOpen, setIsOpen] = React.useState(false);
@@ -93,15 +77,10 @@ export default function Delete() {
     <>
       <Toaster {...toaster} />
       <Heading as="h1" variant="heading10">
-        Services
+        {pageHeading}
       </Heading>
-      <Paragraph>
-        Services enable you to organize and identify your conversations by use case, or manage them in multiple
-        environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
-        recepients&apos; data.
-      </Paragraph>
-
-      <DeleteTable data={data} handleDelete={handleDelete} />
+      <Paragraph>{tableDescription}</Paragraph>
+      <DeleteTable columns={columns} rows={rows} handleDelete={handleDelete} />
       <DeleteConfirm service={serviceToDelete} isOpen={isOpen} setIsOpen={setIsOpen} deleteService={deleteService} />
     </>
   );
