@@ -37,14 +37,14 @@ export const DeleteConfirm = ({ service, isOpen, setIsOpen, deleteService }) => 
 };
 
 DeleteConfirm.propTypes = {
-  service: PropTypes.object,
+  service: PropTypes.array,
   isOpen: PropTypes.bool,
   setIsOpen: PropTypes.func,
   deleteService: PropTypes.func,
 };
 
 DeleteConfirm.defaultProps = {
-  service: {},
+  service: [],
   isOpen: false,
   setIsOpen: {},
   deleteService: {},

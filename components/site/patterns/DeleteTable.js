@@ -40,9 +40,9 @@ export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
             }
           }
           return (
-            <Tr>
-              {row.map((cell) => (
-                <Td>{cell}</Td>
+            <Tr key={index}>
+              {row.map((cell, idx) => (
+                <Td key={row[0].props.children + idx}>{cell}</Td>
               ))}
               <Td key={index}>
                 <Button id={index} size="icon_small" variant="destructive_secondary" onClick={() => handleDelete(row)}>

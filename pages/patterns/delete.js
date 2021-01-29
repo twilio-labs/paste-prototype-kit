@@ -17,7 +17,7 @@ import { Box } from '@twilio-paste/core/box';
 const severity = 'medium';
 const pageHeading = 'Services';
 const tableDescription =
-  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recepients&apos; data.';
+  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recipients&apos; data.';
 const emptyState = 'Nothing to delete here!';
 const columns = ['friendlyName', 'sid', 'greetings'];
 const rows = [
@@ -28,12 +28,12 @@ const rows = [
     <Text as="span" fontFamily="fontFamilyCode">
       4392908903
     </Text>,
-    <Text as="span" fontFamily="fontFamilyCode">
+    <Text as="span" fontFamily="fontFamilyText">
       hi
     </Text>,
   ],
   [
-    <Text as="span" fontFamily="fontFamilyCode">
+    <Text as="span" fontFamily="fontFamilyText">
       Second Thing
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
@@ -44,15 +44,18 @@ const rows = [
     </Text>,
   ],
   [
-    <Text as="span" fontFamily="fontFamilyCode">
+    <Text as="span" fontFamily="fontFamilyText">
       Third thing
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
       8439025738
     </Text>,
+    <Text as="span" fontFamily="fontFamilyText">
+      Welcome!
+    </Text>,
   ],
   [
-    <Text as="span" fontFamily="fontFamilyCode">
+    <Text as="span" fontFamily="fontFamilyText">
       Fourth this
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
@@ -66,7 +69,7 @@ export default function Delete() {
 
   const toaster = useToaster();
   const [isOpen, setIsOpen] = React.useState(false);
-  const [serviceToDelete, setServiceToDelete] = React.useState({});
+  const [serviceToDelete, setServiceToDelete] = React.useState([]);
 
   const deleteService = (serviceRow) => {
     toaster.push({
@@ -76,7 +79,7 @@ export default function Delete() {
     });
     const updatedServices = tableRows.filter((row) => tableRows.indexOf(serviceRow) !== tableRows.indexOf(row));
     setTableRows(updatedServices);
-    setServiceToDelete({});
+    setServiceToDelete([]);
   };
 
   const handleDelete = (serviceRow) => {
@@ -94,7 +97,6 @@ export default function Delete() {
 
   return (
     <>
-      <Toaster {...toaster} />
       <Box marginBottom="space100">
         <Alert variant="neutral">
           <Text as="span">
@@ -103,7 +105,8 @@ export default function Delete() {
             <Anchor href="https://paste.twilio.design/patterns/delete/" showExternal>
               Paste Delete Pattern documentation
             </Anchor>{' '}
-            for more information. To get rid of this alert box, delete lines 90-99 from the "delete.js" file.
+            for more information. To get rid of this alert box, remove the {'"<Box></Box>"'} component from the bottom
+            of the "delete.js" file.
           </Text>
         </Alert>
       </Box>
@@ -113,6 +116,7 @@ export default function Delete() {
       <Paragraph>{tableDescription}</Paragraph>
       <DeleteTable columns={columns} rows={tableRows} emptyState={emptyState} handleDelete={handleDelete} />
       <DeleteConfirm service={serviceToDelete} isOpen={isOpen} setIsOpen={setIsOpen} deleteService={deleteService} />
+      <Toaster {...toaster} />
     </>
   );
 }
