@@ -8,11 +8,12 @@ import { Alert } from '@twilio-paste/core/alert';
 import { Anchor } from '@twilio-paste/core/anchor';
 import { Box } from '@twilio-paste/core/box';
 
+import { Code } from '../../components/site/Code';
 import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
 import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 
 /*
- * To change severity level (for more information on that, check out Paste Delete Pattern docs),
+ * To change severity level (learn more about severity at paste.twilio.design/patterns/delete),
  * type 'low' or 'medium' below ('high' severity is not yet available).
  */
 
@@ -94,7 +95,7 @@ export default function Delete() {
       setServiceToDelete(serviceRow);
     } else {
       throw new Error(
-        'No severity level was detected. Go back to delete.js and make sure to change severity to "low", "medium", or "high"!',
+        'No severity level was detected. Go back to delete.js and make sure to change severity to "low" or "medium"!',
       );
     }
   };
@@ -104,13 +105,13 @@ export default function Delete() {
       <Box marginBottom="space100">
         <Alert variant="neutral">
           <Text as="span">
-            <strong>Hello! </strong>To edit this page in CodeSandbox, go to the &quot;pages&quot; folder and click the
+            <strong>Hello! </strong>To edit this page go to the &quot;pages&quot; folder and click the
             &quot;delete.js&quot; file. Check out the{' '}
             <Anchor href="https://paste.twilio.design/patterns/delete/" showExternal>
               Paste Delete Pattern documentation
             </Anchor>{' '}
-            for more information. To get rid of this alert box, remove the {'"<Box></Box>"'} component from the bottom
-            of the &quot;delete.js&quot; file.
+            for more information. To get rid of this alert box, remove the <Code>{'<Box></Box>'}</Code> component from
+            the bottom of the &quot;delete.js&quot; file.
           </Text>
         </Alert>
       </Box>

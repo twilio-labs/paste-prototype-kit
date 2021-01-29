@@ -32,26 +32,18 @@ export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
         </Tr>
       </THead>
       <TBody>
-        {rows.map((row, index) => {
-          if (row.length < columns.length) {
-            const diff = columns.length - row.length;
-            for (let i = 0; i < diff; i++) {
-              row.push(<Text as="span" fontFamily="fontFamilyText" />);
-            }
-          }
-          return (
-            <Tr key={index}>
-              {row.map((cell, idx) => (
-                <Td key={row[0].props.children + idx}>{cell}</Td>
-              ))}
-              <Td key={index}>
-                <Button id={index} size="icon_small" variant="destructive_secondary" onClick={() => handleDelete(row)}>
-                  <DeleteIcon title="Delete" />
-                </Button>
-              </Td>
-            </Tr>
-          );
-        })}
+        {rows.map((row, index) => (
+          <Tr key={index}>
+            {columns.map((column, idx) => {
+              return <Td key={idx}>{row[idx]}</Td>;
+            })}
+            <Td key={index}>
+              <Button id={index} size="icon_small" variant="destructive_secondary" onClick={() => handleDelete(row)}>
+                <DeleteIcon title="Delete" />
+              </Button>
+            </Td>
+          </Tr>
+        ))}
       </TBody>
     </Table>
   );
