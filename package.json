@@ -10,7 +10,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --list-different './**/*.{js,jsx}'",
     "prettier-clean": "prettier --write './**/*.{js,jsx}'",
-    "cypress": "cypress open"
+    "cypress:open": "cypress open",
+    "cy-start": "next dev -p 3030",
+    "cy:run": "cypress run",
+    "ci-test-dev": "start-server-and-test cy-start http://localhost:3030 cy:run"
   },
   "dependencies": {
     "@twilio-paste/core": "4.2.11",
@@ -21,6 +24,7 @@
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-hook-form": "6.14.1",
     "swr": "^0.4.0"
   },
   "devDependencies": {
@@ -28,6 +32,7 @@
     "eslint-config-twilio": "1.31.0",
     "eslint-config-twilio-react": "1.31.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "start-server-and-test": "1.11.7"
   }
 }

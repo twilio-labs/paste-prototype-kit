@@ -4,7 +4,15 @@ import { Box } from '@twilio-paste/core/box';
 
 const SideNav = ({ children }) => {
   return (
-    <Box as="nav" marginTop="space70" marginX="space20" overflow="auto" role="navigation" aria-label="Main">
+    <Box
+      as="nav"
+      marginTop="space70"
+      marginX="space20"
+      overflow="auto"
+      role="navigation"
+      aria-label="Main"
+      data-cy="nav"
+    >
       {children}
     </Box>
   );
