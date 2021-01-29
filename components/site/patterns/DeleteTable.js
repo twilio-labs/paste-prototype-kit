@@ -5,59 +5,60 @@ import { Button } from '@twilio-paste/core/button';
 import { DeleteIcon } from '@twilio-paste/icons/cjs/DeleteIcon';
 import PropTypes from 'prop-types';
 
-export const DeleteTable = ({ data, handleDelete }) => {
-  if (data.length === 0) {
+export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
+  if (rows.length === 0) {
     return (
       <Text as="span" fontFamily="fontFamilyText">
-        Nothing to delete!
+        {emptyState}
       </Text>
     );
   }
 
-  const cols = Object.keys(data[0]);
+  rows.forEach((row) => {
+    if (row.length > columns.length)
+      throw new Error(
+        'If you are seeing this error, it is because you added more cells than there are columns. Go back to delete.js and add a new column heading. DO NOT try to fix this error in DeleteTable.js!',
+      );
+  });
 
   return (
     <Table>
       <THead>
         <Tr>
-          {cols.map((key) => {
-            if (key === 'id') return <></>;
-            return <Th key={cols.indexOf(key)}>{key}</Th>;
+          {columns.map((column) => {
+            return <Th key={columns.indexOf(column)}>{column}</Th>;
           })}
           <Th>Actions</Th>
         </Tr>
       </THead>
       <TBody>
-        {data.map((service) => {
-          const row = [];
-          for (let i = 1; i < cols.length; i++) {
-            row.push(<Td key={service.id + i}>{service[cols[i]]}</Td>);
-          }
-          row.push(
-            <Td key={service.id}>
-              <Button
-                id={service.id}
-                size="icon_small"
-                variant="destructive_secondary"
-                onClick={() => handleDelete(service)}
-              >
+        {rows.map((row, index) => (
+          <Tr key={index}>
+            {columns.map((column, idx) => {
+              return <Td key={idx}>{row[idx]}</Td>;
+            })}
+            <Td key={index}>
+              <Button id={index} size="icon_small" variant="destructive_secondary" onClick={() => handleDelete(row)}>
                 <DeleteIcon title="Delete" />
               </Button>
-            </Td>,
-          );
-          return <Tr key={service.id}>{row}</Tr>;
-        })}
+            </Td>
+          </Tr>
+        ))}
       </TBody>
     </Table>
   );
 };
 
 DeleteTable.propTypes = {
-  data: PropTypes.array,
+  columns: PropTypes.array,
   handleDelete: PropTypes.func,
+  rows: PropTypes.array,
+  emptyState: PropTypes.string,
 };
 
 DeleteTable.defaultProps = {
-  data: [{}],
+  columns: [],
   handleDelete: {},
+  rows: [[]],
+  emptyState: '',
 };
