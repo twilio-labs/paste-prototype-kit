@@ -1,18 +1,22 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
 import { Heading } from '@twilio-paste/core/heading';
 import { Text } from '@twilio-paste/core/text';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
-import { DeleteTable } from '../../components/site/patterns/DeleteTable';
-import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
 import { Alert } from '@twilio-paste/core/alert';
 import { Anchor } from '@twilio-paste/core/anchor';
 import { Box } from '@twilio-paste/core/box';
 
-//To change severity level (for more information on that, check out Paste Delete Pattern docs),
-//type 'low' or 'medium' below ('high' severity is not yet available).
+import { DeleteConfirm } from '../../components/site/patterns/DeleteConfirm';
+import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 
-//To change what appears on the Delete Pattern page, edit the data below.
+/*
+ * To change severity level (for more information on that, check out Paste Delete Pattern docs),
+ * type 'low' or 'medium' below ('high' severity is not yet available).
+ */
+
+// To change what appears on the Delete Pattern page, edit the data below.
 
 const severity = 'medium';
 const pageHeading = 'Services';
@@ -100,13 +104,13 @@ export default function Delete() {
       <Box marginBottom="space100">
         <Alert variant="neutral">
           <Text as="span">
-            <strong>Hello! </strong>To edit this page in CodeSandbox, go to the "pages" folder and click the "delete.js"
-            file. Check out the{' '}
+            <strong>Hello! </strong>To edit this page in CodeSandbox, go to the &quot;pages&quot; folder and click the
+            &quot;delete.js&quot; file. Check out the{' '}
             <Anchor href="https://paste.twilio.design/patterns/delete/" showExternal>
               Paste Delete Pattern documentation
             </Anchor>{' '}
             for more information. To get rid of this alert box, remove the {'"<Box></Box>"'} component from the bottom
-            of the "delete.js" file.
+            of the &quot;delete.js&quot; file.
           </Text>
         </Alert>
       </Box>

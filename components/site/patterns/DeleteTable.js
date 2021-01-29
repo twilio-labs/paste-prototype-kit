@@ -34,9 +34,9 @@ export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
       <TBody>
         {rows.map((row, index) => {
           if (row.length < columns.length) {
-            let diff = columns.length - row.length;
+            const diff = columns.length - row.length;
             for (let i = 0; i < diff; i++) {
-              row.push(<Text as="span" fontFamily="fontFamilyText"></Text>);
+              row.push(<Text as="span" fontFamily="fontFamilyText" />);
             }
           }
           return (
