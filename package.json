@@ -13,7 +13,7 @@
     "cypress:open": "cypress open",
     "cy-start": "next dev -p 3030",
     "cy:run": "cypress run",
-    "ci-test-dev": "start-server-and-test cy-start http://localhost:3030 cy:run",
+    "ci-test-dev": "start-server-and-test cy-start http://localhost:3030 cy:run"
   },
   "dependencies": {
     "@twilio-paste/core": "4.2.11",
