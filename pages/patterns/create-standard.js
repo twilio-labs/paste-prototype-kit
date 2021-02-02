@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
-import { Theme } from '@twilio-paste/core/theme';
 import { Box } from '@twilio-paste/core/box';
 import { Button } from '@twilio-paste/core/button';
 import { Alert } from '@twilio-paste/core/alert';
@@ -14,11 +12,43 @@ import { useToaster, Toaster } from '@twilio-paste/core/toast';
 import { Code } from '../../components/site/Code';
 import { CreateServiceModal } from '../../components/site/patterns/Create Patterns/CreateServiceModal';
 import { ServicesTable } from '../../components/site/patterns/Create Patterns/ServicesTable';
-import { serviceData } from '../../components/site/patterns/Create Patterns/data';
+
+/*
+ * Comment the other and uncomment this to view/edit the empty state
+ * export const serviceData = [];
+ */
 
 export default function Create() {
+  // column names
+  const NameForColumn1 = 'Service Name';
+  const NameForColumn2 = 'SID';
+  const NameForColumn3 = 'Created';
+  // example sample data
+  const exampleServiceData = [
+    {
+      [NameForColumn1]: 'Montanõ - Valencia',
+      [NameForColumn2]: 'SM0yc4mxi6cn4z13bte7qmflc2drc85mlp',
+      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+    },
+    {
+      [NameForColumn1]: 'Mante Inc',
+      [NameForColumn2]: 'SMl29llgoihx286uhxfb0yc5n0sg391x5n',
+      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+    },
+    {
+      [NameForColumn1]: 'Mante Inc',
+      [NameForColumn2]: 'SMxarke3v30fv17hauqn86a7nhgm3b5d87',
+      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+    },
+    {
+      [NameForColumn1]: 'Kihn - Ondricka',
+      [NameForColumn2]: 'US0yc4mxi6cn4z13bte7qmflc2drc85mlp',
+      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+    },
+  ];
+
   // Table state
-  const [services, setServices] = React.useState(serviceData);
+  const [services, setServices] = React.useState(exampleServiceData);
   // Modal state
   const [isModalOpen, setModalOpen] = React.useState(false);
   const openModal = () => setModalOpen(true);
@@ -30,9 +60,9 @@ export default function Create() {
     // Update our table state
     setServices([
       {
-        name: serviceName,
-        sid: serviceSID,
-        created: new Date().toString(),
+        [NameForColumn1]: serviceName,
+        [NameForColumn2]: serviceSID,
+        [NameForColumn3]: new Date().toString(),
       },
       ...services,
     ]);
@@ -72,7 +102,13 @@ export default function Create() {
                 Create new service
               </Button>
               {/* This renders the modal, depending isModalOpen */}
-              <CreateServiceModal isModalOpen={isModalOpen} handleClose={closeModal} onSubmit={handleFormSubmit} />
+              <CreateServiceModal
+                isModalOpen={isModalOpen}
+                handleClose={closeModal}
+                onSubmit={handleFormSubmit}
+                col1={NameForColumn1}
+                col2={NameForColumn2}
+              />
             </Box>
           </Box>
           <Paragraph>
@@ -81,11 +117,10 @@ export default function Create() {
             recipients&apos; data.
           </Paragraph>
           {/* This renders the services table */}
-          <ServicesTable services={services} />
+          <ServicesTable services={services} col1={NameForColumn1} col2={NameForColumn2} col3={NameForColumn3} />
         </Stack>
       </Box>
       <Toaster {...toaster} />
-
     </>
   );
 }

@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 // These are the default values for the form
 const defaultValues = { serviceName: '', serviceSID: '' };
 
-export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
+export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit, col1, col2 }) => {
   // Form state
   const { handleSubmit, register, errors, reset, control } = useForm(defaultValues);
   // Form unique IDs
@@ -46,7 +46,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
           <Stack orientation="vertical" spacing="space70">
             <Box>
               <Label htmlFor={serviceNameID} required>
-                Service Name
+                {col1}
               </Label>
               {/* This is one of the inputs */}
               <Controller
@@ -69,7 +69,7 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit }) => {
             </Box>
             <Box>
               <Label htmlFor={serviceSidID} required>
-                SID
+                {col2}
               </Label>
               {/* This is the other input */}
               <Controller
@@ -113,10 +113,14 @@ CreateServiceModal.propTypes = {
   isModalOpen: PropTypes.bool,
   handleClose: PropTypes.func,
   onSubmit: PropTypes.func,
+  col1: PropTypes.string,
+  col2: PropTypes.string,
 };
 
 CreateServiceModal.defaultProps = {
   isModalOpen: false,
   handleClose: {},
   onSubmit: {},
+  col1: '',
+  col2: '',
 };
