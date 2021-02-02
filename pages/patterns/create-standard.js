@@ -10,8 +10,8 @@ import { Stack } from '@twilio-paste/core/stack';
 import { useToaster, Toaster } from '@twilio-paste/core/toast';
 
 import { Code } from '../../components/site/Code';
-import { CreateServiceModal } from '../../components/site/patterns/Create Patterns/CreateServiceModal';
-import { ServicesTable } from '../../components/site/patterns/Create Patterns/ServicesTable';
+import { CreateServiceModal } from '../../components/site/patterns/create-patterns/CreateServiceModal';
+import { ServicesTable } from '../../components/site/patterns/create-patterns/ServicesTable';
 
 /*
  * Comment the other and uncomment this to view/edit the empty state
@@ -86,40 +86,39 @@ export default function Create() {
             <Anchor href="https://paste.twilio.design/patterns/create/#standard" showExternal>
               Paste Create Pattern documentation
             </Anchor>{' '}
-            for more information. To get rid of this alert box, remove the <Code>{'<Box></Box>'}</Code> component from
-            the bottom of the &quot;create-standard.js&quot; file.
+            for more information. To get rid of this alert box, remove the first <Code>{'<Box></Box>'}</Code> component,
+            and its contents, from the &quot;create-standard.js&quot; file.
           </Text>
         </Alert>
       </Box>
-      <Box marginBottom="space60" marginTop={['space10', 'space110']} marginLeft="space60" marginRight="space60">
-        <Stack orientation="vertical" spacing="space70">
-          <Box alignItems="center" display="flex">
-            <Heading as="h1" variant="heading10" marginBottom="space0">
-              Services
-            </Heading>
-            <Box marginLeft="auto" data-cy="create-new-service">
-              <Button variant="primary" onClick={openModal}>
-                Create new service
-              </Button>
-              {/* This renders the modal, depending isModalOpen */}
-              <CreateServiceModal
-                isModalOpen={isModalOpen}
-                handleClose={closeModal}
-                onSubmit={handleFormSubmit}
-                col1={NameForColumn1}
-                col2={NameForColumn2}
-              />
-            </Box>
+      <Stack orientation="vertical" spacing="space70">
+        <Box alignItems="center" display="flex">
+          <Heading as="h1" variant="heading10" marginBottom="space0">
+            Services
+          </Heading>
+          <Box marginLeft="auto" data-cy="create-new-service">
+            <Button variant="primary" onClick={openModal}>
+              Create new service
+            </Button>
+            {/* This renders the modal, depending isModalOpen */}
+            <CreateServiceModal
+              isModalOpen={isModalOpen}
+              handleClose={closeModal}
+              onSubmit={handleFormSubmit}
+              col1={NameForColumn1}
+              col2={NameForColumn2}
+            />
           </Box>
-          <Paragraph>
-            Services enable you to organize and identify your conversations by use case, or manage them in multiple
-            environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
-            recipients&apos; data.
-          </Paragraph>
-          {/* This renders the services table */}
-          <ServicesTable services={services} col1={NameForColumn1} col2={NameForColumn2} col3={NameForColumn3} />
-        </Stack>
-      </Box>
+        </Box>
+        <Paragraph>
+          Services enable you to organize and identify your conversations by use case, or manage them in multiple
+          environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your
+          recipients&apos; data.
+        </Paragraph>
+        {/* This renders the services table */}
+        <ServicesTable services={services} col1={NameForColumn1} col2={NameForColumn2} col3={NameForColumn3} />
+      </Stack>
+
       <Toaster {...toaster} />
     </>
   );
