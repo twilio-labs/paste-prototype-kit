@@ -33,17 +33,17 @@ export default function Create() {
     {
       [NameForColumn1]: 'Mante Inc',
       [NameForColumn2]: 'SMl29llgoihx286uhxfb0yc5n0sg391x5n',
-      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+      [NameForColumn3]: 'Tue Jan 13 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
     },
     {
       [NameForColumn1]: 'Mante Inc',
       [NameForColumn2]: 'SMxarke3v30fv17hauqn86a7nhgm3b5d87',
-      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+      [NameForColumn3]: 'Tue Jan 14 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
     },
     {
       [NameForColumn1]: 'Kihn - Ondricka',
       [NameForColumn2]: 'US0yc4mxi6cn4z13bte7qmflc2drc85mlp',
-      [NameForColumn3]: 'Tue Jan 12 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
+      [NameForColumn3]: 'Tue Jan 15 2021 15:42:05 GMT-0700 (Mountain Standard Time)',
     },
   ];
 
