@@ -1,12 +1,11 @@
 import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+
 import { DeleteTable } from '../DeleteTable';
+import { columns, rows, emptyState } from '../../../../pages/patterns/delete';
 
-//test that table is created correctly
-//test that delete button works
-
-test('renders learn react link', () => {
-  const { getByText } = render(<DeleteTable />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('delete table is created', async () => {
+  render(<DeleteTable columns={columns} rows={rows} emptyState={emptyState} />);
+  const rowsOnTable = await screen.findAllByTitle('Row');
+  expect(rowsOnTable).toHaveLength(rows.length);
 });

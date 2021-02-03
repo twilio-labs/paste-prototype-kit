@@ -33,7 +33,7 @@ export const DeleteTable = ({ columns, rows, emptyState, handleDelete }) => {
       </THead>
       <TBody>
         {rows.map((row, index) => (
-          <Tr key={index}>
+          <Tr key={index} title="Row">
             {columns.map((column, idx) => {
               return <Td key={idx}>{row[idx]}</Td>;
             })}
