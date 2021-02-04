@@ -4,7 +4,7 @@ Use this kit to create realistic prototypes using Paste and validate your design
 
 ## Getting set up (for designers):
 
-Deploy to Codesandbox to quickly get started on your prototype
+Open in Codesandbox to start editing your prototype in the browser
 
 [![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
 
@@ -19,6 +19,7 @@ npm install
 # or
 yarn install
 ```
+
 then, run the development server
 
 ```bash
@@ -30,7 +31,20 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the prototype.
 
 To run Cypress tests, run:
-`yarn cypress`
+
+```bash
+npm run cypress
+# or
+yarn cypress
+```
+
+To run Jest tests, run:
+
+```bash
+npm run jest
+# or
+yarn jest
+```
 
 ## Start editing the prototype:
 
