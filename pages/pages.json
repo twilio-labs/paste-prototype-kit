@@ -1,7 +1,5 @@
 {
   "home": [],
-  "explore-products": [],
-  "phone-numbers": ["active-numbers"],
   "patterns": ["delete", "create-standard"],
   "template-page": []
 }
