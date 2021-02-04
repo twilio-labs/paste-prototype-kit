@@ -22,49 +22,49 @@ import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 const severity = 'medium';
 const pageHeading = 'Services';
 const tableDescription =
-  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recipients&apos; data.';
+  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting your recipient data.';
 const emptyState = 'Nothing to delete here!';
-const columns = ['friendlyName', 'sid', 'greetings'];
+const columns = ['Friendly Name', 'SID', 'State'];
 const rows = [
   [
     <Text as="span" fontFamily="fontFamilyText">
-      Fiiiiiiiiirst thing
+      4392908903{' '}
     </Text>,
     <Text as="span" fontFamily="fontFamilyCode">
-      4392908903
+      SMl29llgoihx286uhxfb0yc5n0sg391x5n
     </Text>,
     <Text as="span" fontFamily="fontFamilyText">
-      hi
+      NY
     </Text>,
   ],
   [
     <Text as="span" fontFamily="fontFamilyText">
-      Second Thing
-    </Text>,
-    <Text as="span" fontFamily="fontFamilyCode">
       8439025738
     </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      SM0yc4mxi6cn4z13bte7qmflc2drc85mlp
+    </Text>,
     <Text as="span" fontFamily="fontFamilyText">
-      hello
+      CA
     </Text>,
   ],
   [
     <Text as="span" fontFamily="fontFamilyText">
-      Third thing
-    </Text>,
-    <Text as="span" fontFamily="fontFamilyCode">
       8439025738
     </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      SMxarke3v30fv17hauqn86a7nhgm3b5d87
+    </Text>,
     <Text as="span" fontFamily="fontFamilyText">
-      Welcome!
+      CO
     </Text>,
   ],
   [
     <Text as="span" fontFamily="fontFamilyText">
-      Fourth this
-    </Text>,
-    <Text as="span" fontFamily="fontFamilyCode">
       6239485739
+    </Text>,
+    <Text as="span" fontFamily="fontFamilyCode">
+      US0yc4mxi6cn4z13bte7qmflc2drc85mlp
     </Text>,
   ],
 ];
