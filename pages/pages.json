@@ -1,4 +1,5 @@
 {
   "home": [],
+  "patterns": ["delete", "create-standard"],
   "template-page": []
 }
