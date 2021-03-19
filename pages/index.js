@@ -47,21 +47,21 @@ export default function Home() {
           </Paragraph>
           <Paragraph>
             Make a new page using <strong>&quot;Template Page&quot;</strong>:
-            <OrderedList>
-              <ListItem>
-                Create a new file in the <Code>pages</Code> folder.
-              </ListItem>
-              <ListItem>
-                Name the file <Code>about-me.js</Code>{' '}
-              </ListItem>
-              <ListItem>
-                Go to the <Code>template-page.js</Code> file and copy all of its contents.
-              </ListItem>
-              <ListItem>
-                Paste the contents into your <Code>about-me.js</Code> file
-              </ListItem>
-            </OrderedList>
           </Paragraph>
+          <OrderedList>
+            <ListItem>
+              Create a new file in the <Code>pages</Code> folder.
+            </ListItem>
+            <ListItem>
+              Name the file <Code>about-me.js</Code>{' '}
+            </ListItem>
+            <ListItem>
+              Go to the <Code>template-page.js</Code> file and copy all of its contents.
+            </ListItem>
+            <ListItem>
+              Paste the contents into your <Code>about-me.js</Code> file
+            </ListItem>
+          </OrderedList>
           <Paragraph>Congratulations! You just made your first new page on Paste.</Paragraph>
           <Disclosure>
             <DisclosureHeading as="h4" variant="heading50">
@@ -95,24 +95,24 @@ export default function Home() {
           </Paragraph>
           <Paragraph>
             To add a link to the <strong>&quot;About Me&quot;</strong> page:
-            <OrderedList>
-              <ListItem>
-                Open the <Code>pages.json</Code> file.
-              </ListItem>
-              <ListItem>
-                Find the last list item- currently <Code>&quot;template-page&quot;: []</Code> - and add a comma to the
-                end of the line, so that it reads <Code>&quot;template-page&quot;: [],</Code>. Then press return to make
-                a new line.
-              </ListItem>
-              <ListItem>
-                Type in <Code>&quot;about-me&quot;: []</Code> in the new line.
-                <Paragraph>
-                  Make sure the the string in quotes matches the file name of the page you&apos;re linking to. In this
-                  demo, the file for the &quot;About Me&quot; page is called <Code>about-me.js</Code>.
-                </Paragraph>
-              </ListItem>
-            </OrderedList>
           </Paragraph>
+          <OrderedList>
+            <ListItem>
+              Open the <Code>pages.json</Code> file.
+            </ListItem>
+            <ListItem>
+              Find the last list item- currently <Code>&quot;template-page&quot;: []</Code> - and add a comma to the end
+              of the line, so that it reads <Code>&quot;template-page&quot;: [],</Code>. Then press return to make a new
+              line.
+            </ListItem>
+            <ListItem>
+              Type in <Code>&quot;about-me&quot;: []</Code> in the new line.
+              <Text as="div">
+                Make sure the the string in quotes matches the file name of the page you&apos;re linking to. In this
+                demo, the file for the &quot;About Me&quot; page is called <Code>about-me.js</Code>.
+              </Text>
+            </ListItem>
+          </OrderedList>
           <Paragraph>Once you save your work, a new &quot;About Me&quot; link will pop up in the navigation!</Paragraph>
           <Disclosure>
             <DisclosureHeading as="h4" variant="heading50">
