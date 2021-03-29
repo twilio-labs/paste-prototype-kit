@@ -13,8 +13,8 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@twilio-paste/core": "4.2.11",
-    "@twilio-paste/icons": "3.11.1",
+    "@twilio-paste/core": "^8.0.1",
+    "@twilio-paste/icons": "^5.1.0",
     "cypress": "6.2.1",
     "fs": "^0.0.1-security",
     "next": "10.0.5",
