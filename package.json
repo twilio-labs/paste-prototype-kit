@@ -17,7 +17,7 @@
     "@twilio-paste/icons": "^5.1.0",
     "cypress": "6.2.1",
     "fs": "^0.0.1-security",
-    "next": "10.0.5",
+    "next": "10.2.0",
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
