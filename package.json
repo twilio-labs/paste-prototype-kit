@@ -15,7 +15,7 @@
   "dependencies": {
     "@twilio-paste/core": "^8.0.1",
     "@twilio-paste/icons": "^5.1.0",
-    "cypress": "6.2.1",
+    "cypress": "7.2.0",
     "fs": "^0.0.1-security",
     "next": "10.0.5",
     "prop-types": "15.7.2",
