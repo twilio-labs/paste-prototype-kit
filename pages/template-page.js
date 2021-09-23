@@ -231,6 +231,9 @@ export default function Home() {
           </Paragraph>
         </Card>
       </Stack>
+      <Paragraph>
+        Back to home <PrototypeAnchor href="/">Home</PrototypeAnchor>.
+      </Paragraph>
     </>
   );
 }

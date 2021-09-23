@@ -1,5 +1,16 @@
 # Paste Prototyping Kit
 
+## Quick deploy:
+
+Deploy to Codesandbox
+[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
+
+Deploy to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/twilio-labs/paste-prototype-kit/tree/main)
+
+Deploy to Netlify
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/twilio-labs/paste-prototype-kit)
+
 Use this kit to create realistic prototypes using Paste and validate your designs. Read below for a guide to getting started.
 
 ## Getting set up (for designers):
@@ -61,6 +72,9 @@ Deploy to Vercel
 
 Deploy to Netlify
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/twilio-labs/paste-prototype-kit)
+
+To run Cypress tests, run:
+`yarn cypress`
 
 ## Learn More:
 

@@ -22,10 +22,10 @@ import { DeleteTable } from '../../components/site/patterns/DeleteTable';
 const severity = 'medium';
 const pageHeading = 'Services';
 const tableDescription =
-  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting your recipient data.';
-const emptyState = 'Nothing to delete here!';
-const columns = ['Friendly Name', 'SID', 'State'];
-const rows = [
+  'Services enable you to organize and identify your conversations by use case, or manage them in multiple environments (e.g. dev, stage, prod). This information held within a service is siloed, protecting both your recipients&apos; data.';
+export const emptyState = 'Nothing to delete here!';
+export const columns = ['Friendly Name', 'SID', 'State'];
+export const rows = [
   [
     <Text as="span" fontFamily="fontFamilyText">
       4392908903{' '}
@@ -105,13 +105,13 @@ export default function Delete() {
       <Box marginBottom="space100">
         <Alert variant="neutral">
           <Text as="span">
-            <strong>Hello! </strong>To edit this page go to the &quot;pages&quot; folder and click the
-            &quot;delete.js&quot; file. Check out the{' '}
+            <strong>Hello! </strong>To edit this page go to the &lsquo;pages&lsquo; folder and click the
+            &lsquo;delete.js&lsquo; file. Check out the{' '}
             <Anchor href="https://paste.twilio.design/patterns/delete/" showExternal>
               Paste Delete Pattern documentation
             </Anchor>{' '}
             for more information. To get rid of this alert box, remove the <Code>{'<Box></Box>'}</Code> component from
-            the bottom of the &quot;delete.js&quot; file.
+            the bottom of the &lsquo;delete.js&lsquo; file.
           </Text>
         </Alert>
       </Box>

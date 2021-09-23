@@ -16,7 +16,6 @@ import { kebabToSentence } from '../utils';
 const SideNavDisclosure = ({ section, items }) => {
   const disclosure = useDisclosurePrimitiveState();
   const navSeed = useUIDSeed();
-
   return (
     <SideNavItem>
       <DisclosurePrimitive
