@@ -1,6 +1,6 @@
 # Paste Prototyping Kit
 
-## Quick deploy
+## Quick deploy:
 
 Deploy to Codesandbox
 [![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
@@ -61,10 +61,22 @@ yarn jest
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+If you'd like a more detailed tutorial, follow the steps on the landing page to familiarize yourself with the Prototyping Kit and Paste.
+
+## Share your prototype:
+
+Deploy your prototype to test with customers and validate your designs. Use either of the tools below.
+
+Deploy to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/twilio-labs/paste-prototype-kit/tree/main)
+
+Deploy to Netlify
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/twilio-labs/paste-prototype-kit)
+
 To run Cypress tests, run:
 `yarn cypress`
 
-## Learn More
+## Learn More:
 
 To learn more about Next.js, take a look at the following resources:
 
