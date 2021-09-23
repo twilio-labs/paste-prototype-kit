@@ -16,14 +16,9 @@ import { kebabToSentence } from '../utils';
 const SideNavDisclosure = ({ section, items }) => {
   const disclosure = useDisclosurePrimitiveState();
   const navSeed = useUIDSeed();
-
   return (
     <SideNavItem>
-      <DisclosurePrimitive
-        {...disclosure}
-        as={SideNavDisclosureButton}
-        aria-expanded={disclosure.visible ? 'true' : 'false'}
-      >
+      <DisclosurePrimitive {...disclosure} as={SideNavDisclosureButton}>
         {kebabToSentence(section)}
       </DisclosurePrimitive>
       <DisclosurePrimitiveContent {...disclosure}>

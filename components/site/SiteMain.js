@@ -6,7 +6,7 @@ import { MASTHEAD_HEIGHT } from '../../constants';
 
 const SiteMain = ({ children }) => {
   return (
-    <Box as="main" padding="space120" paddingY="space100" width="100vw">
+    <Box as="main" padding="space120" paddingY="space100" width={`calc(100vw - ${MASTHEAD_HEIGHT})`}>
       {children}
     </Box>
   );

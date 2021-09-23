@@ -13,7 +13,7 @@ const SideNavList = ({ nav }) => {
     <Box as="ul" padding="space0" margin="space0" listStyleType="none">
       {Object.keys(nav).map((item, index) => {
         if (nav[item].length > 0) {
-          return <SideNavDisclosure key={index} section={item} items={nav[item]} />;
+          return <SideNavDisclosure section={item} items={nav[item]} />;
         }
         if (item === 'home') {
           return (
