@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from "@twilio-paste/core/box";
 
 export const MastheadContainer = ({ children }) => {
