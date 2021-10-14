@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Box } from '@twilio-paste/core/box';
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "@twilio-paste/core/box";
 
-import { MastheadContainer } from './MastheadContainer';
-import { MastheadLogo } from './MastheadLogo';
+import { MastheadContainer } from "./MastheadContainer";
+import { MastheadLogo } from "./MastheadLogo";
 
 export const Masthead = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ export const Masthead = ({ children }) => {
         </Box>
         <Box
           alignItems="center"
-          borderLeftColor="colorBorderInverseDarker"
+          borderLeftColor="colorBorderInverseWeaker"
           borderLeftStyle="solid"
           borderLeftWidth="borderWidth10"
           display="flex"
@@ -28,10 +28,10 @@ export const Masthead = ({ children }) => {
     </MastheadContainer>
   );
 };
-Masthead.displayName = 'Masthead';
+Masthead.displayName = "Masthead";
 Masthead.defaultProps = {
-  children: undefined,
+  children: undefined
 };
 Masthead.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
