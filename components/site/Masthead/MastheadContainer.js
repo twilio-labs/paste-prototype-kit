@@ -6,7 +6,7 @@ export const MastheadContainer = ({ children }) => {
   return (
     <Box
       as="header"
-      backgroundColor="colorBackgroundPrimaryDarkest"
+      backgroundColor="colorBackgroundBodyInverse"
       color="colorTextInverse"
       position="sticky"
       top="0"
