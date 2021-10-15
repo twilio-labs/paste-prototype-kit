@@ -14,7 +14,7 @@ export const Masthead = ({ children }) => {
         </Box>
         <Box
           alignItems="center"
-          borderLeftColor="colorBorderInverseDarker"
+          borderLeftColor="colorBorderInverseWeaker"
           borderLeftStyle="solid"
           borderLeftWidth="borderWidth10"
           display="flex"

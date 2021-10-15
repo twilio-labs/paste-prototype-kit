@@ -4,7 +4,17 @@ import { Box } from '@twilio-paste/core/box';
 
 export const MastheadContainer = ({ children }) => {
   return (
-    <Box as="header" backgroundColor="colorBackgroundPrimaryDarkest" color="colorTextInverse" position="sticky" top="0">
+    <Box
+      as="header"
+      backgroundColor="colorBackgroundBodyInverse"
+      color="colorTextInverse"
+      position="sticky"
+      top="0"
+      zIndex="zIndex20"
+      borderBottomColor="colorBorderInverseWeaker"
+      borderBottomStyle="solid"
+      borderWidth="borderWidth10"
+    >
       {children}
     </Box>
   );
