@@ -10,7 +10,7 @@ export const MastheadContainer = ({ children }) => {
       color="colorTextInverse"
       position="sticky"
       top="0"
-      zIndex="2000"
+      zIndex="zIndex20"
       borderBottomColor="colorBorderInverseWeaker"
       borderBottomStyle="solid"
       borderWidth="borderWidth10"
