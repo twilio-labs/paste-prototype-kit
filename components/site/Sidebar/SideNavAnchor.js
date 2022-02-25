@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@twilio-paste/core/box';
 
 const currentStyles = {
-  backgroundColor: 'colorBackgroundDark',
+  backgroundColor: 'colorBackgroundStrong',
   color: 'colorText',
   fontWeight: 'fontWeightBold',
 };
