@@ -16,24 +16,19 @@
     "ci-test-dev": "start-server-and-test cy-start http://localhost:3000 cy:run"
   },
   "dependencies": {
-    "@twilio-paste/core": "^10.5.0",
-    "@twilio-paste/icons": "^5.3.2",
+    "@twilio-paste/core": "^11.1.2",
+    "@twilio-paste/icons": "^6.2.1",
     "cypress": "6.2.1",
     "fs": "^0.0.1-security",
-    "next": "11.1.1",
+    "next": "12.1.0",
     "prop-types": "15.7.2",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
-    "react-hook-form": "6.15.1",
-    "swr": "^0.4.0"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "6.15.1"
   },
   "devDependencies": {
-    "@babel/core": "7.12.13",
-    "@babel/preset-env": "7.12.13",
-    "@babel/preset-react": "7.12.13",
-    "@netlify/plugin-nextjs": "1.1.0",
+    "@netlify/plugin-nextjs": "4.2.7",
     "@testing-library/react": "11.2.5",
-    "babel-jest": "26.6.3",
     "eslint": "7.17.0",
     "eslint-config-twilio": "1.31.0",
     "eslint-config-twilio-react": "1.31.0",
