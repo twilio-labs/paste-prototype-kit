@@ -31,7 +31,7 @@
     "@babel/core": "7.12.13",
     "@babel/preset-env": "7.12.13",
     "@babel/preset-react": "7.12.13",
-    "@netlify/plugin-nextjs": "1.1.0",
+    "@netlify/plugin-nextjs": "4.7.0",
     "@testing-library/react": "11.2.5",
     "babel-jest": "26.6.3",
     "eslint": "7.17.0",
