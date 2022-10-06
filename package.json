@@ -16,14 +16,14 @@
     "ci-test-dev": "start-server-and-test cy-start http://localhost:3000 cy:run"
   },
   "dependencies": {
-    "@twilio-paste/core": "^10.5.0",
-    "@twilio-paste/icons": "^5.3.2",
-    "cypress": "6.2.1",
+    "@twilio-paste/core": "^15.3.0",
+    "@twilio-paste/icons": "^9.2.0",
+    "cypress": "7.2.0",
     "fs": "^0.0.1-security",
-    "next": "11.1.1",
+    "next": "12.1.0",
     "prop-types": "15.7.2",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-hook-form": "6.15.1",
     "swr": "^0.4.0"
   },
