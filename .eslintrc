@@ -5,6 +5,7 @@
   },
   "rules": {
     "import/no-unused-modules": 0,
-    "react/display-name": 0
+    "react/display-name": 0,
+    "sonarjs/no-duplicate-string": 0
   }
 }
