@@ -5,6 +5,10 @@
     {
       "matchPackagePatterns": ["*"],
       "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchPackageNames": ["react", "react-dom"],
+      "enabled": false
     }
   ]
 }
