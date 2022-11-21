@@ -16,7 +16,7 @@
     "ci-test-dev": "start-server-and-test cy-start http://localhost:3000 cy:run"
   },
   "dependencies": {
-    "@twilio-paste/core": "^15.3.0",
+    "@twilio-paste/core": "^17.0.0",
     "@twilio-paste/icons": "^9.2.0",
     "cypress": "7.7.0",
     "fs": "^0.0.1-security",
