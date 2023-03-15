@@ -8,7 +8,7 @@ export const MastheadLogo = () => {
   return (
     <MediaObject verticalAlign="center">
       <MediaFigure spacing="space60">
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <Box
             as="a"
             color="colorTextInverse"
@@ -20,7 +20,7 @@ export const MastheadLogo = () => {
         </Link>
       </MediaFigure>
       <MediaBody>
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <Box
             as="a"
             color="colorTextInverse"

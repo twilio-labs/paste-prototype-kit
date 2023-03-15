@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@twilio-paste/core/box';
-import { ChevronDisclosureExpandedIcon } from '@twilio-paste/icons/cjs/ChevronDisclosureExpandedIcon';
+import { ChevronDisclosureIcon } from '@twilio-paste/icons/cjs/ChevronDisclosureIcon';
 
 export const SideNavDisclosureButton = React.forwardRef((props, ref) => {
   return (
@@ -43,10 +43,10 @@ export const SideNavDisclosureButton = React.forwardRef((props, ref) => {
         alignItems="center"
         display="flex"
         marginRight="space20"
-        transform={props['aria-expanded'] ? 'rotate(0deg)' : 'rotate(-90deg)'}
+        transform={props['aria-expanded'] === 'false' ? 'rotate(0deg)' : 'rotate(90deg)'}
         transition="transform 100ms ease-out"
       >
-        <ChevronDisclosureExpandedIcon color="colorTextIcon" decorative size="sizeIcon10" />
+        <ChevronDisclosureIcon color="colorTextIcon" decorative size="sizeIcon10" />
       </Box>
       <Box flexGrow={1}>{props.children}</Box>
     </Box>

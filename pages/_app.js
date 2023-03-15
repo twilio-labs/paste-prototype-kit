@@ -14,7 +14,7 @@ import { SideBar } from '../components/site/Sidebar';
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
-    <Theme.Provider theme="default">
+    <Theme.Provider theme="twilio">
       <StylingGlobals styles={fontStyles} />
       <Head>
         <title>Prototype kit</title>

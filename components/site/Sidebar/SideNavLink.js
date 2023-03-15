@@ -9,7 +9,7 @@ const SideNavLink = ({ children, nested, href }) => {
   const { asPath } = useRouter();
   const isCurrent = asPath === href;
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <SideNavAnchor isCurrent={isCurrent} nested={nested}>
         {children}
       </SideNavAnchor>
