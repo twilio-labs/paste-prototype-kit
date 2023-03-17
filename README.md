@@ -3,7 +3,7 @@
 ## Quick deploy:
 
 Deploy to Codesandbox
-[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
+[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/github/twilio-labs/paste-prototype-kit/)
 
 Deploy to Vercel
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/twilio-labs/paste-prototype-kit/tree/main)
@@ -17,7 +17,7 @@ Use this kit to create realistic prototypes using Paste and validate your design
 
 Open in Codesandbox to start editing your prototype in the browser
 
-[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/twilio-labs/paste-prototype-kit)
+[![Edit paste-prototype-kit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/github/twilio-labs/paste-prototype-kit/)
 
 If you're logged into Codesandbox, click the blue "fork" button to start editing the prototype.
 
