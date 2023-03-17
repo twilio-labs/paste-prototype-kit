@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useUID } from '@twilio-paste/core/uid-library';
 import { HelpText } from '@twilio-paste/core/help-text';
 import { Input } from '@twilio-paste/core/input';
@@ -15,7 +15,12 @@ const defaultValues = { serviceName: '', serviceSID: '' };
 
 export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit, col1, col2 }) => {
   // Form state
-  const { handleSubmit, register, errors, reset, control } = useForm(defaultValues);
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    reset,
+  } = useForm(defaultValues);
   // Form unique IDs
   const modalHeadingID = useUID();
   const serviceNameID = useUID();
@@ -49,20 +54,17 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit, col1, c
                 {col1}
               </Label>
               {/* This is one of the inputs */}
-              <Controller
-                as={Input}
+              <Input
                 id={serviceNameID}
-                name="serviceName"
-                control={control}
-                type="text"
-                defaultValue=""
-                rules={{
+                {...register('serviceName', {
                   required: 'Please enter a service name.',
                   minLength: {
                     value: 2,
                     message: 'Please enter more than two characters',
                   },
-                }}
+                })}
+                type="text"
+                defaultValue=""
                 data-cy="service-modal-input"
               />
               {errors.serviceName && <HelpText variant="error">{errors.serviceName.message}</HelpText>}
@@ -72,20 +74,17 @@ export const CreateServiceModal = ({ isModalOpen, handleClose, onSubmit, col1, c
                 {col2}
               </Label>
               {/* This is the other input */}
-              <Controller
-                as={Input}
+              <Input
                 id={serviceSidID}
-                name="serviceSID"
-                control={control}
-                type="text"
-                defaultValue=""
-                rules={{
+                {...register('serviceSID', {
                   required: 'Please enter a SID value.',
                   minLength: {
                     value: 2,
                     message: 'Please enter more than two characters',
                   },
-                }}
+                })}
+                type="text"
+                defaultValue=""
                 data-cy="sid-modal-input"
               />
               {errors.serviceSID && <HelpText variant="error">{errors.serviceSID.message}</HelpText>}

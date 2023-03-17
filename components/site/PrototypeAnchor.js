@@ -5,7 +5,7 @@ import { Anchor } from '@twilio-paste/core/anchor';
 
 const PrototypeAnchor = (props) => {
   return (
-    <Link {...props} passHref>
+    <Link {...props} passHref legacyBehavior>
       <Anchor {...props} />
     </Link>
   );
