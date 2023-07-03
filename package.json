@@ -18,22 +18,22 @@
   "dependencies": {
     "@twilio-paste/core": "latest",
     "@twilio-paste/icons": "latest",
-    "next": "13.4.6",
+    "next": "13.4.7",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.45.0"
+    "react-hook-form": "7.45.1"
   },
   "devDependencies": {
     "@babel/core": "7.22.5",
     "@babel/preset-env": "7.22.5",
     "@babel/preset-react": "7.22.5",
-    "@netlify/plugin-nextjs": "4.38.0",
+    "@netlify/plugin-nextjs": "4.39.0",
     "@testing-library/react": "14.0.0",
     "babel-jest": "29.5.0",
-    "cypress": "12.15.0",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.6",
+    "cypress": "12.16.0",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.7",
     "eslint-config-twilio": "2.0.0",
     "eslint-config-twilio-react": "2.0.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -41,5 +41,5 @@
     "prettier": "2.8.8",
     "start-server-and-test": "2.0.0"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.1"
 }
