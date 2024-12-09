@@ -1563,9 +1563,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:7.25.9":
-  version: 7.25.9
-  resolution: "@babel/preset-react@npm:7.25.9"
+"@babel/preset-react@npm:7.26.3":
+  version: 7.26.3
+  resolution: "@babel/preset-react@npm:7.26.3"
   dependencies:
     "@babel/helper-plugin-utils": ^7.25.9
     "@babel/helper-validator-option": ^7.25.9
@@ -1575,7 +1575,7 @@ __metadata:
     "@babel/plugin-transform-react-pure-annotations": ^7.25.9
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: b5650c07a744ab4024c04fae002c9043235b4ad8687de8bf759135b9c6186553f4f53fde0a4583ce4c019560b79c176f39c745cdf77645af07071d26d8ba84ce
+  checksum: 9c76f145026715c8e4a1f6c44f208918e700227d8d8a8068f4ae10d87031d23eb8b483e508cd4452d65066f731b7a8169527e66e83ffe165595e8db7899dd859
   languageName: node
   linkType: hard
 
@@ -6732,9 +6732,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.16.0":
-  version: 13.16.0
-  resolution: "cypress@npm:13.16.0"
+"cypress@npm:13.16.1":
+  version: 13.16.1
+  resolution: "cypress@npm:13.16.1"
   dependencies:
     "@cypress/request": ^3.0.6
     "@cypress/xvfb": ^1.2.4
@@ -6781,7 +6781,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 1c9beb259998336aaf27fb8548d9880d603db0d4b935be068acbc5545a2537554ae01f928ee28559323cc42213cd2e4c0730c796a682bbcadb82e4a95b370954
+  checksum: 9307ec98858979d01920b3da884223c1132501716fe055017f6aa19b0af58ae50998b502940678ce935804b383d8784a21da48fed3e53b740789aac1768c2a3f
   languageName: node
   linkType: hard
 
@@ -10823,12 +10823,12 @@ __metadata:
   dependencies:
     "@babel/core": 7.26.0
     "@babel/preset-env": 7.26.0
-    "@babel/preset-react": 7.25.9
+    "@babel/preset-react": 7.26.3
     "@testing-library/react": 14.3.1
     "@twilio-paste/core": latest
     "@twilio-paste/icons": latest
     babel-jest: 29.7.0
-    cypress: 13.16.0
+    cypress: 13.16.1
     eslint: 8.57.1
     eslint-config-next: 13.5.7
     eslint-config-twilio: 2.0.0
@@ -10840,7 +10840,7 @@ __metadata:
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
-    react-hook-form: 7.53.2
+    react-hook-form: 7.54.0
     start-server-and-test: 2.0.8
   languageName: unknown
   linkType: soft
@@ -11208,12 +11208,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:7.53.2":
-  version: 7.53.2
-  resolution: "react-hook-form@npm:7.53.2"
+"react-hook-form@npm:7.54.0":
+  version: 7.54.0
+  resolution: "react-hook-form@npm:7.54.0"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
-  checksum: 37e2dd0e79cd8d3376a7a2cb72ad7b59f0594be499daa898d2c6bec896fc30c2f86e62e8b41bc9d325f77220bd8d76cb31e917f77f1c92ad5740adb1a4cc69e2
+  checksum: 7101c7fc3096610f65dec29e52cf007b8bc51aa3d1551c08743d1aff1d87b915c5a35224b83f0ef45d2d511b17549b15e569794b3b547c2883d4f29fe4ffe0e4
   languageName: node
   linkType: hard
 
