@@ -40,5 +40,5 @@
     "prettier": "2.8.8",
     "start-server-and-test": "2.0.10"
   },
-  "packageManager": "yarn@3.8.7"
+  "packageManager": "yarn@4.6.0"
 }
