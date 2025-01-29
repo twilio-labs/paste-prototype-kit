@@ -6786,9 +6786,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.17.0":
-  version: 13.17.0
-  resolution: "cypress@npm:13.17.0"
+"cypress@npm:14.0.1":
+  version: 14.0.1
+  resolution: "cypress@npm:14.0.1"
   dependencies:
     "@cypress/request": ^3.0.6
     "@cypress/xvfb": ^1.2.4
@@ -6835,7 +6835,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: c1d87358e8b92e19e3bf5246a8787dcdd5083e27fa7b816d26c28b4678ecd87b5b3b8661fb812bc993845ca30a482d3f18837af1ac6d9e142e41049dccbc51e0
+  checksum: c1c1d3b913961868307f33afe716e1cbf26c91f5ad71a6b5f2f162172115c73ba83ea68cb49c295b49e643ffa223fafc624c397c1962fcc07cbdb4be588f5f14
   languageName: node
   linkType: hard
 
@@ -10882,7 +10882,7 @@ __metadata:
     "@twilio-paste/core": latest
     "@twilio-paste/icons": latest
     babel-jest: 29.7.0
-    cypress: 13.17.0
+    cypress: 14.0.1
     eslint: 8.57.1
     eslint-config-next: 13.5.8
     eslint-config-twilio: 2.0.0
