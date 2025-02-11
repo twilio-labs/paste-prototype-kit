@@ -30,7 +30,7 @@
     "@babel/preset-react": "7.26.3",
     "@testing-library/react": "14.3.1",
     "babel-jest": "29.7.0",
-    "cypress": "13.17.0",
+    "cypress": "14.0.3",
     "eslint": "8.57.1",
     "eslint-config-next": "13.5.8",
     "eslint-config-twilio": "2.0.0",
