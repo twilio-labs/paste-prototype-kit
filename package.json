@@ -18,7 +18,7 @@
   "dependencies": {
     "@twilio-paste/core": "latest",
     "@twilio-paste/icons": "latest",
-    "cypress": "7.7.0",
+    "cypress": "14.5.4",
     "fs": "^0.0.1-security",
     "next": "14.2.25",
     "prop-types": "15.8.1",
@@ -32,7 +32,7 @@
     "@babel/preset-react": "7.27.1",
     "@testing-library/react": "14.3.1",
     "babel-jest": "29.7.0",
-    "cypress": "13.17.0",
+    "cypress": "14.5.4",
     "eslint": "8.57.1",
     "eslint-config-next": "13.5.11",
     "eslint-config-twilio": "2.0.0",
