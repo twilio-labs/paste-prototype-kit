@@ -13698,7 +13698,7 @@ __metadata:
     fs: ^0.0.1-security
     jest: 29.7.0
     next: 14.2.25
-    prettier: 2.8.8
+    prettier: 3.10.1
     prop-types: 15.8.1
     react: 18.2.0
     react-dom: 18.2.0
@@ -13860,7 +13860,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.8, prettier@npm:^2.5.1":
+"prettier@npm:3.10.1":
+  version: 3.10.1
+  resolution: "prettier@npm:3.10.1"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 2695a99d0918ccea3ea643fb2788e8bd61e40e0544561c2674b91645f3f658e7402f4479a6af195de4537616982b5ae29105ec1b5021b1b43f1a3c3b9b92d805
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.5.1":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
